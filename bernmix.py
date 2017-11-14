@@ -1,4 +1,3 @@
-
 import bernmix_double.bernmix_double as bmd
 import bernmix_int.bernmix_int as bmi
 

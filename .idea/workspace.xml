@@ -1,222 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/bernmix_double/bernmix_double.py" line="81" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/bernmix_double/bernmix_double.py" line="80" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e1790949-5b9e-4480-90ec-46e73a811a81" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bernmix_double/bernmix_correction.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bernmix_double/dio.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_02.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_03_scipy.py" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_04_cvxopt.py" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex100_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex100_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex10_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex10_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex11_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex11_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex12_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex12_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex13_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex13_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex14_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex14_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex15_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex15_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex16_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex16_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex17_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex17_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex18_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex18_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex19_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex19_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex1_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex1_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex20_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex20_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex21_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex21_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex22_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex22_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex23_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex23_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex24_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex24_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex25_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex25_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex26_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex26_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex27_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex27_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex28_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex28_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex29_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex29_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex2_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex2_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex30_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex30_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex31_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex31_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex32_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex32_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex33_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex33_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex34_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex34_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex35_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex35_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex36_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex36_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex37_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex37_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex38_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex38_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex39_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex39_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex3_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex3_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex40_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex40_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex41_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex41_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex42_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex42_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex43_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex43_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex44_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex44_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex45_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex45_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex46_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex46_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex47_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex47_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex48_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex48_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex49_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex49_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex4_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex4_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex50_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex50_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex51_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex51_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex52_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex52_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex53_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex53_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex54_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex54_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex55_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex55_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex56_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex56_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex57_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex57_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex58_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex58_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex59_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex59_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex5_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex5_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex60_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex60_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex61_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex61_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex62_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex62_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex63_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex63_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex64_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex64_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex65_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex65_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex66_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex66_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex67_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex67_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex68_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex68_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex69_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex69_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex6_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex6_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex70_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex70_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex71_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex71_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex72_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex72_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex73_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex73_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex74_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex74_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex75_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex75_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex76_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex76_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex77_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex77_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex78_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex78_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex79_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex79_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex7_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex7_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex80_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex80_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex81_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex81_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex82_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex82_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex83_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex83_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex84_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex84_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex85_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex85_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex86_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex86_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex87_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex87_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex88_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex88_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex89_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex89_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex8_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex8_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex90_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex90_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex91_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex91_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex92_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex92_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex93_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex93_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex94_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex94_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex95_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex95_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex96_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex96_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex97_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex97_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex98_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex98_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex99_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex99_n20_pw" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex9_n20_points" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex9_n20_pw" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bernmix_double/bernvect.cpython-36m-darwin.so" afterPath="$PROJECT_DIR$/bernmix_double/bernvect.cpython-36m-darwin.so" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bernmix_double/build/temp.macosx-10.12-x86_64-3.6/bernvect_evol.o" afterPath="$PROJECT_DIR$/bernmix_double/build/temp.macosx-10.12-x86_64-3.6/bernvect_evol.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bernmix.py" afterPath="$PROJECT_DIR$/bernmix.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bernmix_double/bernmix_correction.py" afterPath="$PROJECT_DIR$/bernmix_double/bernmix_correction.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bernmix_double/bernmix_double.py" afterPath="$PROJECT_DIR$/bernmix_double/bernmix_double.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bernmix_double/bernvect_evol.cpp" afterPath="$PROJECT_DIR$/bernmix_double/bernvect_evol.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bernmix_double/gen_alg.py" afterPath="$PROJECT_DIR$/bernmix_double/gen_alg.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_01_cmp_with_exact.py" afterPath="$PROJECT_DIR$/test_01_cmp_with_exact.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_04_cvxopt.py" afterPath="$PROJECT_DIR$/test_04_cvxopt.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -230,21 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="test_04_cvxopt.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="test_04_cvxopt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_04_cvxopt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bernmix_correction.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_correction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+            <state relative-caret-position="315">
+              <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -252,12 +35,38 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="dio.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bernmix_double/dio.py">
+      <file leaf-file-name="bernmix_correction.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_correction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="585">
-              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="686">
+              <caret line="121" column="41" lean-forward="true" selection-start-line="121" selection-start-column="41" selection-end-line="121" selection-end-column="41" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bernmix_double.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_double.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#18#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bernmix.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bernmix.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#43#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -275,11 +84,9 @@
       <file leaf-file-name="test_05_precision.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test_05_precision.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="680">
-              <caret line="47" column="95" lean-forward="false" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="95" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="20">
+              <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="47" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -313,7 +120,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/bermmix_double/__init__.py" />
-        <option value="$PROJECT_DIR$/bernmix.py" />
         <option value="$PROJECT_DIR$/bernmix_double/evolving.pyx" />
         <option value="$PROJECT_DIR$/bernmix_double/bernvect.pyx" />
         <option value="$PROJECT_DIR$/bernmix_double/evolving.py" />
@@ -323,9 +129,10 @@
         <option value="$PROJECT_DIR$/test_03_scipy.py" />
         <option value="$PROJECT_DIR$/test_01_cmp_with_exact.py" />
         <option value="$PROJECT_DIR$/test_05_presision.py" />
-        <option value="$PROJECT_DIR$/bernmix_double/bernmix_double.py" />
-        <option value="$PROJECT_DIR$/bernmix_double/bernmix_correction.py" />
         <option value="$PROJECT_DIR$/test_05_precision.py" />
+        <option value="$PROJECT_DIR$/bernmix_double/bernmix_correction.py" />
+        <option value="$PROJECT_DIR$/bernmix_double/bernmix_double.py" />
+        <option value="$PROJECT_DIR$/bernmix.py" />
         <option value="$PROJECT_DIR$/test_04_cvxopt.py" />
       </list>
     </option>
@@ -522,7 +329,7 @@
         <state relative-caret-position="840">
           <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="64" selection-end-column="33" />
           <folding>
-            <element signature="e#0#18#0" expanded="false" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -549,9 +356,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -567,7 +372,7 @@
         <state relative-caret-position="1590">
           <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="4" selection-end-line="110" selection-end-column="19" />
           <folding>
-            <element signature="e#0#18#0" expanded="false" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -577,7 +382,7 @@
         <state relative-caret-position="360">
           <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="43" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -611,7 +416,7 @@
         <state relative-caret-position="675">
           <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -643,7 +448,7 @@
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="18" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -677,7 +482,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="27" lean-forward="true" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="27" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -728,7 +533,7 @@
         <state relative-caret-position="1122">
           <caret line="66" column="27" lean-forward="true" selection-start-line="66" selection-start-column="27" selection-end-line="66" selection-end-column="27" />
           <folding>
-            <element signature="e#0#35#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -780,13 +585,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bernmix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/test_01_cmp_with_exact.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -805,20 +603,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_double.py">
+    <entry file="file://$PROJECT_DIR$/bernmix_double/dio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="585">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test_05_precision.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="680">
-          <caret line="47" column="95" lean-forward="false" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="95" />
+        <state relative-caret-position="20">
+          <caret line="3" column="0" lean-forward="false" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_double.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#43#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_correction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="686">
+          <caret line="121" column="41" lean-forward="true" selection-start-line="121" selection-start-column="41" selection-end-line="121" selection-end-column="41" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -827,27 +651,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_04_cvxopt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_correction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
+        <state relative-caret-position="315">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bernmix_double/dio.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

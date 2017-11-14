@@ -1,9 +1,6 @@
 import numpy as np
-import cvxopt
-from cvxopt import glpk
 import bernmix_double.bernmix_double as bmd
-import bernmix_int.bernmix_int as bm_int
-
+import bernmix_double.bernmix_correction as bmc
 
 n = 100
 w = np.random.rand(n)
@@ -12,7 +9,7 @@ target_indiv = np.random.randint(0, 2, n).astype(int)
 
 
 
-M = 10 ** 6
+M = 10 ** 4
 
 
 cdf_corr = bmc.cdf_corrected(w, probs, target_indiv, M)

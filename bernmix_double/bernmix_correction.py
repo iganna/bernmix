@@ -118,3 +118,5 @@ def cdf_corrected(weights, probs, target_indiv, M):
     return cdf2
 
 
+if __name__ == "__main__":
+    print('bernmix_correction is loaded')

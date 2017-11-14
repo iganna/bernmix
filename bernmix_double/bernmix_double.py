@@ -1,4 +1,3 @@
-import bernmix_double.gen_alg as ga
 import numpy as np
 import bernmix_int.bernmix_int as bm_int
 
