@@ -1,10 +1,223 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/bernmix_double/bernmix_double.py" line="53" mnemonic="3" />
+    <bookmark url="file://$PROJECT_DIR$/bernmix_double/bernmix_double.py" line="81" mnemonic="3" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e1790949-5b9e-4480-90ec-46e73a811a81" name="Default" comment="" />
+    <list default="true" id="e1790949-5b9e-4480-90ec-46e73a811a81" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bernmix_double/bernmix_correction.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/bernmix_double/dio.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_02.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_03_scipy.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test_04_cvxopt.py" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex100_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex100_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex10_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex10_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex11_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex11_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex12_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex12_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex13_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex13_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex14_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex14_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex15_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex15_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex16_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex16_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex17_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex17_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex18_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex18_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex19_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex19_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex1_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex1_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex20_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex20_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex21_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex21_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex22_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex22_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex23_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex23_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex24_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex24_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex25_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex25_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex26_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex26_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex27_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex27_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex28_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex28_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex29_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex29_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex2_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex2_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex30_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex30_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex31_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex31_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex32_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex32_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex33_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex33_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex34_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex34_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex35_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex35_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex36_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex36_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex37_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex37_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex38_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex38_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex39_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex39_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex3_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex3_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex40_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex40_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex41_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex41_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex42_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex42_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex43_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex43_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex44_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex44_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex45_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex45_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex46_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex46_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex47_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex47_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex48_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex48_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex49_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex49_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex4_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex4_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex50_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex50_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex51_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex51_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex52_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex52_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex53_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex53_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex54_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex54_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex55_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex55_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex56_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex56_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex57_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex57_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex58_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex58_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex59_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex59_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex5_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex5_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex60_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex60_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex61_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex61_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex62_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex62_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex63_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex63_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex64_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex64_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex65_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex65_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex66_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex66_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex67_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex67_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex68_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex68_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex69_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex69_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex6_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex6_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex70_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex70_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex71_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex71_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex72_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex72_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex73_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex73_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex74_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex74_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex75_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex75_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex76_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex76_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex77_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex77_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex78_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex78_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex79_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex79_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex7_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex7_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex80_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex80_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex81_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex81_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex82_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex82_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex83_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex83_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex84_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex84_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex85_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex85_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex86_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex86_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex87_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex87_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex88_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex88_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex89_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex89_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex8_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex8_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex90_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex90_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex91_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex91_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex92_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex92_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex93_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex93_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex94_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex94_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex95_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex95_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex96_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex96_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex97_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex97_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex98_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex98_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex99_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex99_n20_pw" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex9_n20_points" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test_examples/ex9_n20_pw" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bernmix_double/bernvect.cpython-36m-darwin.so" afterPath="$PROJECT_DIR$/bernmix_double/bernvect.cpython-36m-darwin.so" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bernmix_double/build/temp.macosx-10.12-x86_64-3.6/bernvect_evol.o" afterPath="$PROJECT_DIR$/bernmix_double/build/temp.macosx-10.12-x86_64-3.6/bernvect_evol.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bernmix_double/bernmix_double.py" afterPath="$PROJECT_DIR$/bernmix_double/bernmix_double.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bernmix_double/bernvect_evol.cpp" afterPath="$PROJECT_DIR$/bernmix_double/bernvect_evol.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bernmix_double/gen_alg.py" afterPath="$PROJECT_DIR$/bernmix_double/gen_alg.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test_01_cmp_with_exact.py" afterPath="$PROJECT_DIR$/test_01_cmp_with_exact.py" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,11 +230,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="gen_alg.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bernmix_double/gen_alg.py">
+      <file leaf-file-name="test_04_cvxopt.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_04_cvxopt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="492">
-              <caret line="219" column="31" lean-forward="false" selection-start-line="219" selection-start-column="27" selection-end-line="219" selection-end-column="31" />
+            <state relative-caret-position="15">
+              <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bernmix_correction.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_correction.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -29,25 +252,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="test_01_cmp_with_exact.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/test_01_cmp_with_exact.py">
+      <file leaf-file-name="dio.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/bernmix_double/dio.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding>
-                <element signature="e#0#43#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="585">
+              <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bernmix_double.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_double.py">
+      <file leaf-file-name="test_02.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_02.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1241">
-              <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
+            <state relative-caret-position="158">
+              <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test_05_precision.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/test_05_precision.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="680">
+              <caret line="47" column="95" lean-forward="false" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="95" />
               <folding>
-                <element signature="e#0#35#0" expanded="true" />
+                <element signature="e#0#18#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -66,7 +297,17 @@
     <findStrings>
       <find>roun</find>
       <find>indiv</find>
+      <find>prin</find>
+      <find>target_value = np.dot(target_i</find>
+      <find>weights_</find>
+      <find>print</find>
+      <find>where</find>
+      <find>rand</find>
+      <find>glpk</find>
     </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -76,9 +317,16 @@
         <option value="$PROJECT_DIR$/bernmix_double/evolving.pyx" />
         <option value="$PROJECT_DIR$/bernmix_double/bernvect.pyx" />
         <option value="$PROJECT_DIR$/bernmix_double/evolving.py" />
-        <option value="$PROJECT_DIR$/test_01_cmp_with_exact.py" />
-        <option value="$PROJECT_DIR$/bernmix_double/bernmix_double.py" />
         <option value="$PROJECT_DIR$/bernmix_double/gen_alg.py" />
+        <option value="$PROJECT_DIR$/test_02.py" />
+        <option value="$PROJECT_DIR$/bernmix_double/dio.py" />
+        <option value="$PROJECT_DIR$/test_03_scipy.py" />
+        <option value="$PROJECT_DIR$/test_01_cmp_with_exact.py" />
+        <option value="$PROJECT_DIR$/test_05_presision.py" />
+        <option value="$PROJECT_DIR$/bernmix_double/bernmix_double.py" />
+        <option value="$PROJECT_DIR$/bernmix_double/bernmix_correction.py" />
+        <option value="$PROJECT_DIR$/test_05_precision.py" />
+        <option value="$PROJECT_DIR$/test_04_cvxopt.py" />
       </list>
     </option>
   </component>
@@ -92,6 +340,7 @@
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="ProjectPane" proportions="" version="1">
       <flattenPackages />
@@ -107,6 +356,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -129,12 +379,12 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="settings.editor.selected.configurable" value="pyconsole" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -148,7 +398,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.bernmix_double">
+  <component name="RunManager" selected="Python.test_04_cvxopt">
     <configuration name="bernmix_double" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -167,9 +417,31 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
     </configuration>
+    <configuration name="test_04_cvxopt" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="bernmix" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test_04_cvxopt.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+    </configuration>
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Python.bernmix_double" />
+      <item index="1" class="java.lang.String" itemvalue="Python.test_04_cvxopt" />
+    </list>
     <recent_temporary>
-      <list size="1">
-        <item index="0" class="java.lang.String" itemvalue="Python.bernmix_double" />
+      <list size="2">
+        <item index="0" class="java.lang.String" itemvalue="Python.test_04_cvxopt" />
+        <item index="1" class="java.lang.String" itemvalue="Python.bernmix_double" />
       </list>
     </recent_temporary>
   </component>
@@ -188,14 +460,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.11597222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17708333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.45416668" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.40069443" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -207,6 +479,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
@@ -239,16 +512,156 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/test_04_cvxopt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="60" column="0" lean-forward="false" selection-start-line="60" selection-start-column="0" selection-end-line="64" selection-end-column="33" />
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_01_cmp_with_exact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="25" lean-forward="true" selection-start-line="20" selection-start-column="4" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <element signature="e#1#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_05_precision.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="23" column="0" lean-forward="true" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#18#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix_double/gen_alg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6450">
+          <caret line="432" column="12" lean-forward="false" selection-start-line="432" selection-start-column="12" selection-end-line="432" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_04_cvxopt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1590">
+          <caret line="110" column="19" lean-forward="false" selection-start-line="110" selection-start-column="4" selection-end-line="110" selection-end-column="19" />
+          <folding>
+            <element signature="e#0#18#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_double.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="26" column="43" lean-forward="true" selection-start-line="26" selection-start-column="11" selection-end-line="26" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix_double/gen_alg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5430">
+          <caret line="364" column="51" lean-forward="false" selection-start-line="364" selection-start-column="51" selection-end-line="364" selection-end-column="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_01_cmp_with_exact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="945">
+          <caret line="65" column="8" lean-forward="false" selection-start-line="65" selection-start-column="8" selection-end-line="65" selection-end-column="8" />
+          <folding>
+            <element signature="e#1#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix_double/dio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_double.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="675">
+          <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="32" column="3" lean-forward="false" selection-start-line="32" selection-start-column="0" selection-end-line="32" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix_double/gen_alg.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7123">
+          <caret line="421" column="9" lean-forward="false" selection-start-line="421" selection-start-column="9" selection-end-line="421" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix_double/dio.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_double.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="18" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_01_cmp_with_exact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="33" lean-forward="true" selection-start-line="7" selection-start-column="33" selection-end-line="7" selection-end-column="33" />
+          <folding>
+            <element signature="e#1#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bernmix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="70" lean-forward="false" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -256,7 +669,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -275,7 +687,7 @@
         <state relative-caret-position="136">
           <caret line="8" column="14" lean-forward="true" selection-start-line="8" selection-start-column="14" selection-end-line="8" selection-end-column="14" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#1#44#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -284,9 +696,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3604">
           <caret line="212" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -294,7 +703,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="70" lean-forward="true" selection-start-line="17" selection-start-column="22" selection-end-line="17" selection-end-column="70" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -302,9 +710,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
           <caret line="13" column="19" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#18#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -313,7 +718,7 @@
         <state relative-caret-position="323">
           <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="60" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#1#44#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -332,26 +737,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bermmix_double/__init__.py" />
     <entry file="file://$PROJECT_DIR$/bernmix_double/evolving" />
     <entry file="file://$PROJECT_DIR$/bernmix_double/evolving.pyx" />
-    <entry file="file://$PROJECT_DIR$/bernmix.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bernmix_double/bernvect_evol.pxd">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -359,7 +754,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -367,45 +761,93 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
           <caret line="30" column="35" lean-forward="false" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bernmix_double/evolving.py">
+    <entry file="file://$PROJECT_DIR$/bernmix_double/evolving.py" />
+    <entry file="file://$PROJECT_DIR$/test_05_presision.py" />
+    <entry file="file://$PROJECT_DIR$/test_03_scipy.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="35" lean-forward="true" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
-          <folding />
+        <state relative-caret-position="330">
+          <caret line="54" column="13" lean-forward="true" selection-start-line="54" selection-start-column="13" selection-end-line="54" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bernmix_double/gen_alg.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="492">
-          <caret line="219" column="31" lean-forward="false" selection-start-line="219" selection-start-column="27" selection-end-line="219" selection-end-column="31" />
+        <state relative-caret-position="416">
+          <caret line="486" column="28" lean-forward="false" selection-start-line="486" selection-start-column="24" selection-end-line="486" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_01_cmp_with_exact.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="25" column="25" lean-forward="false" selection-start-line="20" selection-start-column="4" selection-end-line="25" selection-end-column="25" />
+          <folding>
+            <element signature="e#1#44#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_02.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_double.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="7" lean-forward="true" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test_05_precision.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="680">
+          <caret line="47" column="95" lean-forward="false" selection-start-line="47" selection-start-column="45" selection-end-line="47" selection-end-column="95" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test_01_cmp_with_exact.py">
+    <entry file="file://$PROJECT_DIR$/test_04_cvxopt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+        <state relative-caret-position="15">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_correction.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="19" lean-forward="false" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
           <folding>
-            <element signature="e#0#43#0" expanded="true" />
+            <element signature="e#0#18#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_double.py">
+    <entry file="file://$PROJECT_DIR$/bernmix_double/dio.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1241">
-          <caret line="73" column="13" lean-forward="true" selection-start-line="73" selection-start-column="13" selection-end-line="73" selection-end-column="13" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="585">
+          <caret line="48" column="0" lean-forward="false" selection-start-line="48" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
