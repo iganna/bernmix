@@ -91,14 +91,11 @@ def cdf_corrected(weights, probs, target_indiv, M):
     target_range = np.arange(target_value_z - k, target_value_z + k + 1, 1)
     distr_in_probs = np.zeros((2 * k + 1, 2))
     for i, target_value in enumerate(target_range):
-        print(i)
         pop = binprog_multisol(wc, target_value, 100, 10)
         if pop is None:
             distr_in_probs[i, 0] = 0
             distr_in_probs[i, 1] = 0
             continue
-
-        pop_size = len(pop)
 
         s_values = list(map(lambda x: np.dot(x[0:n], w), pop))
 
@@ -108,9 +105,7 @@ def cdf_corrected(weights, probs, target_indiv, M):
         distr_in_probs[i, 0] = sum(np.extract(s_values <= target_value_s, indiv_probs)) / sum_prob
         distr_in_probs[i, 1] = sum(np.extract(s_values > target_value_s, indiv_probs)) / sum_prob
 
-
     pmf = bm_int.pmf(probs, wc)
-
 
     pmf_range = list(map(lambda t: pmf[t], target_range))
     cdf2 = sum(pmf[:target_value_z + 1 - k - 1:]) + np.dot(pmf_range, distr_in_probs[:, 0])
