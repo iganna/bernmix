@@ -24,8 +24,8 @@
       <file leaf-file-name="test_04_cvxopt.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/test_04_cvxopt.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+            <state relative-caret-position="285">
+              <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -36,8 +36,8 @@
       <file leaf-file-name="bernmix_correction.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_correction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="96" column="36" lean-forward="true" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
+            <state relative-caret-position="105">
+              <caret line="7" column="68" lean-forward="false" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
               <folding>
                 <element signature="e#0#18#0" expanded="true" />
               </folding>
@@ -635,8 +635,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/bernmix_double/bernmix_correction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="96" column="36" lean-forward="true" selection-start-line="96" selection-start-column="36" selection-end-line="96" selection-end-column="36" />
+        <state relative-caret-position="105">
+          <caret line="7" column="68" lean-forward="false" selection-start-line="7" selection-start-column="68" selection-end-line="7" selection-end-column="68" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>
@@ -645,8 +645,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/test_04_cvxopt.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="12" lean-forward="true" selection-start-line="25" selection-start-column="12" selection-end-line="25" selection-end-column="12" />
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
             <element signature="e#0#18#0" expanded="true" />
           </folding>

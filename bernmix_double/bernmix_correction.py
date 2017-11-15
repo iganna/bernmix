@@ -5,7 +5,7 @@ import bernmix_int.bernmix_int as bm_int
 
 
 
-def cdf_corrected(weights, probs, target_indiv, M):
+def cdf_corrected(weights, probs, target_indiv, M, n_solutions = 100):
     '''
 
     :param weights:
@@ -79,6 +79,7 @@ def cdf_corrected(weights, probs, target_indiv, M):
         # ANNA: from 0 to n
         return pop
 
+
     n = len(weights)
     w = weights
     coef = (M + 2 * n) / sum(w)
@@ -91,7 +92,7 @@ def cdf_corrected(weights, probs, target_indiv, M):
     target_range = np.arange(target_value_z - k, target_value_z + k + 1, 1)
     distr_in_probs = np.zeros((2 * k + 1, 2))
     for i, target_value in enumerate(target_range):
-        pop = binprog_multisol(wc, target_value, 100, 10)
+        pop = binprog_multisol(wc, target_value, n_solutions, 10)
         if pop is None:
             distr_in_probs[i, 0] = 0
             distr_in_probs[i, 1] = 0
