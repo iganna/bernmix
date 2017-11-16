@@ -37,7 +37,6 @@ def cdfs(i_distr):
 
         mx = np.empty((0, len(target_indivs)))
         for cdf in cdfs:
-            print(cdf)
             mx = np.append(mx, [cdf], axis=0)
 
         np.savetxt(file_dir_res + 'distr' + str(i_distr).zfill(2) + '_M' + str(i) +'.txt', mx, fmt='%.16f')
