@@ -19,14 +19,17 @@ def cdfs(i_distr):
 
 
     file_dir_res = 'res_examples_n0100/'
+    n_solutions = 100
 
-    for i in range(4, 6):
+    for i in range(4, 7):
 
         print('Proc', i_distr, 'pow', i)
 
-        cdfs = list(map(lambda target_indiv: bmc.cdf_corrected(weights, probs, target_indiv, 10 ** i, 100), target_indivs))
+        cdfs = list(map(lambda target_indiv: bmc.cdf_corrected(weights, probs, target_indiv, 10 ** i, n_solutions), target_indivs))
 
-        np.savetxt(file_dir_res + 'distr' + str(i_distr).zfill(2) + '_M' + str(i) +'_corrected.txt', [np.array(cdfs)], fmt='%.16f')
+        np.savetxt(file_dir_res + 'distr' + str(i_distr).zfill(2) + '_M' + str(i) +
+                   '_corrected' + str(n_solutions).zfill(4) + '.txt',
+                   [np.array(cdfs)], fmt='%.16f')
 
     print('Proc', i_distr, 'is ended')
 
