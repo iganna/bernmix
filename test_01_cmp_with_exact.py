@@ -4,12 +4,35 @@ import bernmix_double.gen_alg as ga
 import numpy as np
 
 # ===============================
+# generate distributions
+# 5 distributions, 20 points in each
+# ===============================
+n = 100
+pop_size = 5
+n_disrt = 20
+
+for i_distr in range(n_disrt):
+    w = np.random.rand(n)
+    p = np.random.rand(n)
+    pw = np.concatenate(([p], [w]), axis=0)
+    file_dir_pw = '/Users/anna/OneDrive/polytech/stud_projects/enrichment/scripts/bernmix/test_examples_n0100/'
+    np.savetxt(file_dir_pw + 'distr' + str(i_distr).zfill(2) + '_pw.txt', pw, fmt='%.16f')
+
+
+    pop = np.random.randint(0, 2, (pop_size, n))
+    np.savetxt(file_dir_pw + 'distr' + str(i_distr).zfill(2) + '_pop.txt', pop, fmt='%i')
+
+
+
+
+
+# ===============================
 # generate populations for 100 random points:
 # 5 distributions, 20 points in each
 # ===============================
 
-n = 20
-pop_size = 1000
+n = 100
+pop_size = 5
 n_epoch = 500
 M = 10**4
 n_range = (M - 1000, M)

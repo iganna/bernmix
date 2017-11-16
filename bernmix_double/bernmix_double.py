@@ -26,6 +26,32 @@ def cdf_fixed_scaling(probs, weights, target_bern_vector, n_points):
     return sum(pmf[:new_target_value + 1:])
 
 
+def cdfs_fixed_M(probs, weights, target_vectors, n_points):
+    """
+    This function calculates the CDF value for fixed number of points to approximate
+    :param probs:
+    :param weights:
+    :param target_value:
+    :param n_points:
+    :return:
+    """
+    n = len(weights)
+    w = sum(weights)
+    c = (n_points + n) / w
+
+    weights_new = np.around(weights * c, decimals=1).astype(int)
+    target_values = map(lambda x: np.dot(weights_new, x).astype(int), target_vectors)
+
+
+    pmf = bm_int.pmf(probs, weights_new)
+
+    pmfs = map(lambda x: sum(pmf[:x + 1:]), target_values)
+
+
+    return pmfs
+
+
+
 def cdf_range(probs, weights, target_bern_vector, n_points, k):
     """
     This function calculates the CDF value for fixed number of points to approximate
