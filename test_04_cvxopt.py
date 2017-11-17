@@ -7,7 +7,7 @@ from itertools import count
 
 def cdfs(i_distr):
 
-    file_dir_pw = 'test_examples_n0100/'
+    file_dir_pw = 'test_examples_n0500/'
     pw = np.loadtxt(file_dir_pw + 'distr' + str(i_distr).zfill(2) + '_pw.txt')
     probs = pw[0]
     weights = pw[1]
@@ -18,7 +18,7 @@ def cdfs(i_distr):
     #cdf_M = bmd.cdf_fixed_scaling(probs, weights, target_indiv, M)
 
 
-    file_dir_res = 'res_examples_n0100/'
+    file_dir_res = 'res_examples_n0500/'
 
     for i in range(4, 9):
         if i == 4:
