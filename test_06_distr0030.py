@@ -30,17 +30,16 @@ def cdfs(i_distr):
         indiv_values[n:2*n] = indiv_values[0:n] + weights[i]
         indiv_probs[n:2 * n] = indiv_probs[0:n] / (1 - probs[i]) * probs[i]
 
+    print('Proc', i_distr, 'pmf is computed')
 
+    target_values = list(map(lambda x: np.dot(x, weights), target_indivs))
 
-    print(sum(indiv_probs))
-    # target_values = list(map(lambda x: np.dot(x, weights), target_indivs))
-    #
-    # cdfs = list(map(lambda x: sum(indiv_probs[indiv_values <= x]), target_values))
-    #
-    # file_dir_res = 'res_examples_n0030/'
-    #
-    # np.savetxt(file_dir_res + 'distr' + str(i_distr).zfill(2) + '_exact.txt',
-    #            cdfs, fmt='%.16f')
+    cdfs = list(map(lambda x: sum(indiv_probs[indiv_values <= x]), target_values))
+
+    file_dir_res = 'res_examples_n0030/'
+
+    np.savetxt(file_dir_res + 'distr' + str(i_distr).zfill(2) + '_exact.txt',
+               cdfs, fmt='%.16f')
 
     print('Proc', i_distr, 'is ended')
 
