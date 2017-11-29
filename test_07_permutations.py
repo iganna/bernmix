@@ -23,6 +23,7 @@ def cdfs_calc(i_distr):
                '_permut' + str(n_permut).zfill(4) + '.txt',
                [np.array(cdfs)], fmt='%.16f')
 
+    print('Proc', i_distr, 'is ended')
 
 
 n_disrt = 20
