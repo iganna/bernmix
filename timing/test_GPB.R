@@ -1,15 +1,17 @@
 library('GPB')
 
-n_range = round(10 ^ seq(1, 2.8, 0.2))
-m_range = round(10 ^ seq(3, 6, 0.2))
+n_range = c(10, 50, 100, 500)
+m_range = round(10 ^ seq(3, 6, 1/3))
 op <- options(digits.secs = 6)
 runtime_mx = matrix(, nrow = 0, ncol = length(n_range) * length(m_range))
+id = 0
 for (i in 1:20)
 {
   res = c()
   for(n in n_range)
     for (m in m_range)
     {
+      id = id+1
       print(c(n, m, i))
       probs = runif(n)
       
@@ -18,21 +20,33 @@ for (i in 1:20)
       d = m/(sum(b) - sum(a))
       aval = round(a * d)
       bval = round(b * d)
-      bval[bval == max(bval)] = bval[bval == max(bval)] + (m-sum(bval))
+      if(min(bval) == 0)
+      {
+        print('aaaa')
+        bval[bval == min(bval)] = 1
+      }
+      while(sum(bval) != m)
+      {
+        idx = 1:n
+        idx = idx[bval == max(bval)]
+        bval[idx[1]] = bval[idx[1]] - 1 * sign(sum(bval) - m)
+      }
+      
+      
       print(sum(bval))
       weights = rep(1, n)
       
-      kk = 0:sum(bval)
-      start_time <- Sys.time()
-      pdf = dgpb(kk=kk, pp=probs, aval=aval, bval=bval, wts=weights)
-      end_time <- Sys.time()
-      runtime = end_time - start_time
-      res = c(res, runtime[[1]])
+      write.table(x = rbind(probs, bval), 
+                  file = paste(c('~/storage/projects/bernmix/timing/data_for_timing/disrt_', 
+                                 sprintf("%05i", id) ), sep = "", collapse = ""),
+                  col.names = F, row.names = F)
+      
+
     }
-  runtime_mx = rbind(runtime_mx, res)
+
 }
 
-write.table(x=runtime_mx, file = 'runtime_mx.txt')
+#write.table(x=runtime_mx, file = 'runtime_mx.txt')
 
 
 
