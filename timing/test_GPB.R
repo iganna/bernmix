@@ -1,7 +1,7 @@
 library('GPB')
 
-n_range = c(10, 50, 100, 500)
-m_range = round(10 ^ seq(3, 6, 1/3))
+n_range = c(10, 50, 100, 200, 500)
+m_range = round(10 ^ seq(3, 6, 1/5))
 op <- options(digits.secs = 6)
 runtime_mx = matrix(, nrow = 0, ncol = length(n_range) * length(m_range))
 id = 0

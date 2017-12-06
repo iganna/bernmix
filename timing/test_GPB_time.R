@@ -4,6 +4,7 @@ op <- options(digits.secs = 6)
 
 library(parallel)
 library('GPB')
+# library('poibin')
 path_to_distributions = "~/storage/projects/bernmix/timing/data_for_timing/"
 files = list.files(path_to_distributions)
 
@@ -25,6 +26,10 @@ gettime <-function(f)
 
   start_time <- Sys.time()
   pdf = dgpb(kk=kk, pp=probs, aval=aval, bval=bval, wts=weights)
+  
+  # kk = 0:length(probs)
+  # pdf_poibin = dpoibin(kk=kk, pp=probs, wts=weights)
+  
   end_time <- Sys.time()
   runtime = end_time - start_time
   
@@ -48,4 +53,4 @@ clusterEvalQ(cl, library('GPB'))
 
 x = parSapply(cl, files, gettime)
 
-write.table(x=x, file = '~/storage/projects/bernmix/timing/res_for_timing/runtime_RES3.txt')
+write.table(x=x, file = '~/storage/projects/bernmix/timing/res_for_timing/runtime_RES1.txt')
