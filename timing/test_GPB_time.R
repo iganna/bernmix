@@ -32,10 +32,10 @@ gettime <-function(f)
   
   end_time <- Sys.time()
   runtime = end_time - start_time
-  
-  write.table(runtime,
+  t = as.numeric(runtime, units = "secs")
+  write.table(t,
               file = paste(c('~/storage/projects/bernmix/timing/res_for_timing/time_',
-                            f), sep = "", collapse = ""),
+                            f, '.txt'), sep = "", collapse = ""),
               col.names = F, row.names = F)
   return(runtime[[1]])
 }
