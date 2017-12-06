@@ -33,10 +33,10 @@ gettime <-function(f)
   end_time <- Sys.time()
   runtime = end_time - start_time
   
-  # write.table(runtime, 
-  #             file = paste(c('~/storage/projects/bernmix/timing/res_for_timing/time_', 
-  #                           f), sep = "", collapse = ""),
-  #             col.names = F, row.names = F)
+  write.table(runtime,
+              file = paste(c('~/storage/projects/bernmix/timing/res_for_timing/time_',
+                            f), sep = "", collapse = ""),
+              col.names = F, row.names = F)
   return(runtime[[1]])
 }
 
@@ -53,4 +53,4 @@ clusterEvalQ(cl, library('GPB'))
 
 x = parSapply(cl, files, gettime)
 
-write.table(x=x, file = '~/storage/projects/bernmix/timing/res_for_timing/runtime_RES1.txt')
+# write.table(x=x, file = '~/storage/projects/bernmix/timing/res_for_timing/runtime_RES1.txt')
