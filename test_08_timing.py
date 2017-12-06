@@ -101,14 +101,14 @@ def timing(file):
     # pmf_unweighted = bmi.pmf(probs, weights)
     # end2 = time.time()
     # t2 = end2 - start2
-    print(file[29:34], t1)
-    return t1
+    # print(file[29:34], t1)
+    np.savetxt("timing/res_bm/res_bm_" + file[29:34] + '.txt',
+               t1, fmt='%0.6f')
 
 
 
 files = glob.glob('timing/data_for_timing/*')
 with Pool(10) as workers:
     pmap = workers.map
-    x = pmap(timing, files)
+    pmap(timing, files)
 
-np.savetxt("res1", x, fmt='%0.6f')
