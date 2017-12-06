@@ -96,12 +96,12 @@ def timing(file):
     end1 = time.time()
     t1 = end1 - start1
 
-    weights = np.zeros(n)
+    weights = np.ones(n)
     start2 = time.time()
     pmf_unweighted = bmi.pmf(probs, weights)
     end2 = time.time()
     t2 = end2 - start2
-    print(t1, t2)
+    print(file[29:34], t1, t2)
 
 
 
