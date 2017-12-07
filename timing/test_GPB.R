@@ -1,7 +1,7 @@
 library('GPB')
 
-n_range = c(10, 50, 100, 200, 500)
-m_range = round(10 ^ seq(3, 6, 1/5))
+n_range = c(50, 100, 500, 1000, 5000, 10000)
+m_range = round(10 ^ seq(3, 7, 1/5))
 op <- options(digits.secs = 6)
 runtime_mx = matrix(, nrow = 0, ncol = length(n_range) * length(m_range))
 id = 0
@@ -11,6 +11,9 @@ for (i in 1:20)
   for(n in n_range)
     for (m in m_range)
     {
+      if(n >= m)
+        next
+      
       id = id+1
       print(c(n, m, i))
       probs = runif(n)
