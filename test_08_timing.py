@@ -79,6 +79,42 @@ from multiprocess import Pool
 #     print(t1, t2)
 
 
+# ##======================================
+#
+#
+#
+# def timing(file):
+#
+#     pw = np.loadtxt(file)
+#     probs = pw[0]
+#     weights = pw[1]
+#     n = len(weights)
+#
+#     start1 = time.time()
+#     d = PoiBin(probs)
+#     pmf_wieghted = bmi.pmf(probs, weights)
+#
+#     # d = PoiBin(probs)
+#     # pmf_exact = d.pmf(range(0, n + 1))
+#
+#     end1 = time.time()
+#     t1 = end1 - start1
+#
+#     # weights = np.ones(n)
+#     # start2 = time.time()
+#     # pmf_unweighted = bmi.pmf(probs, weights)
+#     # end2 = time.time()
+#     # t2 = end2 - start2
+#     # print(file[29:34], t1)
+#     np.savetxt("res_bm_" + file[-5:] + '.txt', [t1], fmt='%0.6f')
+#
+#
+#
+# files = glob.glob('timing/data_for_timing/*')
+# with Pool(10) as workers:
+#     pmap = workers.map
+#     pmap(timing, files)
+
 ##======================================
 
 
@@ -87,28 +123,26 @@ def timing(file):
 
     pw = np.loadtxt(file)
     probs = pw[0]
-    weights = pw[1]
-    n = len(weights)
+    n = len(probs)
+    weights = np.ones(n)
+
 
     start1 = time.time()
     d = PoiBin(probs)
     pmf_wieghted = bmi.pmf(probs, weights)
+
+    # d = PoiBin(probs)
+    # pmf_exact = d.pmf(range(0, n + 1))
+
     end1 = time.time()
     t1 = end1 - start1
 
-    # weights = np.ones(n)
-    # start2 = time.time()
-    # pmf_unweighted = bmi.pmf(probs, weights)
-    # end2 = time.time()
-    # t2 = end2 - start2
-    # print(file[29:34], t1)
-    np.savetxt("timing/res_bm/res_bm_" + file[29:34] + '.txt',
-               t1, fmt='%0.6f')
+    np.savetxt("/timing/res_poibin_BM/res_bm_" + file[-5:] + '.txt',
+               [t1], fmt='%0.6f')
 
 
 
-files = glob.glob('timing/data_for_timing/*')
+files = glob.glob('timing/data_poibin/*')
 with Pool(10) as workers:
     pmap = workers.map
     pmap(timing, files)
-
