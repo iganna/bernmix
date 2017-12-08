@@ -3,9 +3,8 @@ op <- options(digits.secs = 6)
 
 
 library(parallel)
-library('GPB')
-# library('poibin')
-path_to_distributions = "~/storage/projects/bernmix/timing/data_add_GPB/"
+library('poibin')
+path_to_distributions = "~/storage/projects/bernmix/timing/data_poibin/"
 files = list.files(path_to_distributions)
 
 gettime <-function(f)
@@ -14,28 +13,21 @@ gettime <-function(f)
   #print(f)
   d = data.matrix(read.table(paste(c(path_to_distributions, f),  sep = "", collapse = "")))
   probs = as.vector(d[1,])
-  bval = round(as.vector(d[2,]))
   n = length(probs)
   
-  aval = rep(0, n)
   weights = rep(1, n)
+  kk = 0:n
   
-  kk = 0:sum(bval)
-  # if (length(bval) != length(probs))
-  #   print('aaaa')
-
   start_time <- Sys.time()
-  pdf = dgpb(kk=kk, pp=probs, aval=aval, bval=bval, wts=weights)
-  
-  # kk = 0:length(probs)
-  # pdf_poibin = dpoibin(kk=kk, pp=probs, wts=weights)
+
+  pdf_poibin = dpoibin(kk=kk, pp=probs, wts=weights)
   
   end_time <- Sys.time()
   runtime = end_time - start_time
   t = as.numeric(runtime, units = "secs")
   write.table(t,
-              file = paste(c('~/storage/projects/bernmix/timing/res_for_timing/time_',
-                            f, '.txt'), sep = "", collapse = ""),
+              file = paste(c('~/storage/projects/bernmix/timing/res_poibin_R/time_',
+                             f, '.txt'), sep = "", collapse = ""),
               col.names = F, row.names = F)
   return(runtime[[1]])
 }
@@ -47,7 +39,7 @@ no_cores <- 10
 # Initiate cluster
 cl <- makeCluster(no_cores)
 clusterExport(cl,"path_to_distributions")
-clusterEvalQ(cl, library('GPB'))
+clusterEvalQ(cl, library('poibin'))
 
 # x = sapply(files, gettime)
 

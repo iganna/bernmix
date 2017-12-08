@@ -1,5 +1,3 @@
-library('GPB')
-
 n_range = c(100, 1000, 10000)
 m_range = round(10 ^ seq(3, 6.9, 1/5))
 op <- options(digits.secs = 6)
