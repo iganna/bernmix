@@ -49,7 +49,7 @@ def cdf_corrected(weights, probs, target_indiv, M, n_solutions = 100):
             b_eq = np.asmatrix(1)
 
             idx = np.random.permutation(n)
-            idx = idx[0:n_fixed]
+            idx = idx[0:round(n_fixed/100 * n)]
             for i in idx:
                 tmp = np.zeros(n+1)
                 tmp[i] = 1

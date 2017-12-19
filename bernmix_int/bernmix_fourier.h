@@ -10,7 +10,7 @@
 #define bernmix_fourier_h
 
 #define _USE_MATH_DEFINES
-#define EPS 1e-10
+#define EPS 1e-16
 
 #include <stdlib.h>
 #include <math.h>
