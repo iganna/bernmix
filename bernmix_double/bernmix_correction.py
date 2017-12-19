@@ -45,7 +45,7 @@ def cdf_corrected(weights, probs, target_indiv, M, n_solutions = 100):
         pop = np.empty((0, n+1))
         for _ in range(n_solutions):
             # x_(n+1) = 1
-            A_eq = np.append(np.zeros(n), 1).astype(int).reshape(1,n+1)
+            A_eq = np.append(np.zeros(n), 1).astype(int).reshape(1, n+1)
             b_eq = np.asmatrix(1)
 
             idx = np.random.permutation(n)

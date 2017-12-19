@@ -1,3 +1,13 @@
+
+
+
+__author__ = "Anna Igolkina"
+__license__ = "MIT"
+__version__ = ""
+__maintainer__ = "Anna Igolkina"
+__email__ = "igolkinaanna11@gmail.com"
+__status__ = "Development"
+
 import bernmix_double.bernmix_double as bmd
 import bernmix_int.bernmix_int as bmi
 
