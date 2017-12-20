@@ -9,15 +9,18 @@ __author__ = "Anna Igolkina"
 __all__ = ["gen_special_int_distr", ]
 
 
+import re
 import glob
 import os
 from multiprocess import Pool
 import numpy as np
 import math
 import scipy.stats as st
+from scipy.stats import binom
 import itertools as it
-import bernmix_double.bernmix_int as bmi
+import bernmix_int.bernmix_int as bmi
 from tests.poibin import PoiBin
+from bernmix import exact_int_pmf
 
 
 def error_mn(p1, p2):
@@ -36,7 +39,8 @@ def error_rss(p1, p2):
 def accuracy_binom_distr(n_range,
                          n_repeats):
     """
-
+    This function calculate MN and RSS discrepancy between PMFs for the Binomial distribution
+    calculated via theoretical formula and bernmix package
     :param n_range:
     :param n_repeats:
     :return:
@@ -53,13 +57,15 @@ def accuracy_binom_distr(n_range,
             mn += error_mn(pmf_bermnix, pmf_exact)
             rss += error_rss(pmf_bermnix, pmf_exact)
 
-        yield n, mn / n_repeats, rss / n_repeats
+        yield '{}\t{:.16f}\t{:.16f}'.format(n, mn / n_repeats, rss / n_repeats)
 
 
 def accuracy_poibin_distr(n_range,
                           n_repeats):
     """
-
+    This function calculate MN and RSS discrepancy between PMFs
+    for the Poisson Binomial distribution
+    calculated via theoretical formula and bernmix package
     :param n_range:
     :param n_repeats:
     :return:
@@ -75,14 +81,16 @@ def accuracy_poibin_distr(n_range,
             pmf_bermnix = bmi.pmf(probs, weights)
             mn += error_mn(pmf_bermnix, pmf_exact)
             rss += error_rss(pmf_bermnix, pmf_exact)
-        yield n, mn / n_repeats, rss / n_repeats
+
+        yield '{}\t{:.16f}\t{:.16f}'.format(n, mn / n_repeats, rss / n_repeats)
 
 
 def gen_special_int_distr(n_range,
                           n_repeats,
-                          path_to_out_folder):
+                          path_distr_folder):
     """
-
+    Generator of distributions, when weights follow one of five distributions:
+    Uniform, Even uniform, Poisson, Geometric and Beta-Binomial
     :param n_range:
     :param n_repeats:
     :param path_to_out_folder:
@@ -117,81 +125,96 @@ def gen_special_int_distr(n_range,
 
     n_digits = len(str(n_repeats))
     for n, cnt in it.product(n_range, range(n_repeats)):
-        for distr_id, distr_w in enumerate(gen_distr_w):
+        for distr_id, distr_func in enumerate(gen_distr_w):
             probs = np.random.rand(n)
-            weights = distr_w(n)
+            weights = distr_func(n)
             pw = np.concatenate(([probs], [weights]), axis=0)
-            np.savetxt(path_to_out_folder + 'distr_n' +
+            np.savetxt(path_distr_folder + 'distr_n' +
                        str(n) + '_' +
                        'w' + str(distr_id + 1) + '_' +
                        str(cnt).zfill(n_digits) + '_pw.txt', pw, fmt='%.16f')
 
 
-def exact_special_int_distr(path_disrt_folder, path_exact_folder):
 
-    def comp_indiv_prob(indiv, probs):
-        """ Compute probability for individual """
-        prob_multiply = list(map(lambda i: probs[i] if indiv[i] == 1 else (1 - probs[i]),
-                                 range(30)))
-        return np.prod(prob_multiply)
+def accuracy_special_int_distr(n_range,
+                               path_distr_folder, path_accuracy_folder,
+                               n_threads):
+    """
+    Comparisson of a PMF computed by convolution and computed by bernmix
+    :param n_range:
+    :param path_distr_folder:
+    :param path_accuracy_folder:
+    :param n_threads:
+    :return:
+    """
 
-    def exact_pmf(probs, weights):
 
-        n = len(probs)
-        # initialise size of outcomes
-        outcomes = np.zeros(2 ** n)
-        pmf = np.zeros(2 ** n)
+    def comp_errors(file_pw):
+        """ Compute MN and RSS errors for each distribution"""
 
-        # initialise two first of outcomes (0,0,...0) and (1,0,...0)
-        outcomes[0:2] = [0, weights[0]]
-        pmf[0] = comp_indiv_prob(np.zeros(n), probs)
-        pmf[1] = comp_indiv_prob(np.append([1], np.zeros(n-1)), probs)
+        # get id of the distribution and id of weights
+        n_id, w_id = re.findall(r'/distr_n(\d+)_w(\d+)\w+.txt', file_pw)[0]
+        n_id /= 10
 
-        for i in range(1, n):
-            print(i)
-            n = 2 ** i
-            outcomes[n:2 * n] = outcomes[0:n] + weights[i]
-            pmf[n:2 * n] = pmf[0:n] / (1 - probs[i]) * probs[i]
-        return pmf, outcomes
-
-    def exact_cdf(file):
-
-        pw = np.loadtxt(file_dir_pw + 'distr' + str(i_distr).zfill(2) + '_pw.txt')
+        pw = np.loadtxt(file_pw)
         probs = pw[0]
         weights = pw[1]
+        pmf_exact = exact_int_pmf(probs, weights)
+        pmf_bermnix = bmi.pmf(probs, weights)
 
-        target_indivs = np.loadtxt(file_dir_pw + 'distr' + str(i_distr).zfill(2) + '_pop.txt').astype(int)
+        mn = error_mn(pmf_bermnix, pmf_exact)
+        rss = error_rss(pmf_bermnix, pmf_exact)
+        mn_values[n_id-1, w_id-1] += mn
+        rss_values[n_id - 1, w_id - 1] += rss
+        comp_repeats[n_id - 1, w_id - 1] += 1
 
-        print('Proc', i_distr, 'pmf is computed')
 
-        target_values = list(map(lambda x: np.dot(x, weights), target_indivs))
+    # initialisation
+    n_distributions_for_weights = 5
+    mn_values = np.zeros(len(n_range), n_distributions_for_weights)
+    rss_values = np.zeros(len(n_range), n_distributions_for_weights)
+    comp_repeats = np.zeros(len(n_range), n_distributions_for_weights)
 
-        cdfs = list(map(lambda x: sum(indiv_probs[indiv_values <= x]), target_values))
 
-        file_dir_res = 'res_examples_n0030/'
-
-        np.savetxt(file_dir_res + 'distr' + str(i_distr).zfill(2) + '_exact.txt',
-                   cdfs, fmt='%.16f')
-
-        print('Proc', i_distr, 'is ended')
-
-    with Pool(10) as workers:
+    files = glob.glob(path_distr_folder + '*_pw.txt')
+    with Pool(n_threads) as workers:
         pmap = workers.map
-        pmap(cdfs, range(n_disrt))
+        pmap(comp_errors, files)
 
+    mn_values /= comp_repeats
+    rss_values /= comp_repeats
 
-def accuracy_special_int_distr():
-
-    pass
-
-
+    np.savetxt(path_accuracy_folder + 'accuracy_mn.txt', mn_values, '%.16f')
+    np.savetxt(path_accuracy_folder + 'accuracy_rss.txt', rss_values, '%.16f')
 
 
 if __name__ == '__main__':
-    # generate distribution
-    path_to_out_folder = 'tests/data_test_precision/tmp/'
+
+
+    # Accuracy for Binomial and Poisson Binomial distributions
+    n_range = [10, 50, 100, 500, 1000, 5000]
+    n_repeats = 10
+    results_binom = accuracy_binom_distr(n_range, n_repeats)
+    results_poibin = accuracy_poibin_distr(n_range, n_repeats)
+    # Save results
+    path_accuracy_binpoibin = 'tests/data_test_precision/accuracy_bin_poibin/'
+    if not os.path.exists(path_accuracy_binpoibin):
+        os.makedirs(path_accuracy_binpoibin)
+    np.savetxt(path_accuracy_binpoibin + 'results_binom.txt', results_binom, '%s')
+    np.savetxt(path_accuracy_binpoibin + 'results_poibin.txt', results_poibin, '%s')
+
+    # Generate distributions with specifically distributed weights
+    path_distr_folder = 'tests/data_test_precision/distr_int_weights/'
+    n_range = [10, 20, 30]
+    n_repeats = 20
+    gen_special_int_distr(n_range,
+                          n_repeats,
+                          path_distr_folder)
+    # Calculate accuracy
+    n_threads = 10
+    accuracy_special_int_distr(n_range,
+                               path_distr_folder, path_distr_folder,
+                               n_threads)
 
 
 
-    #accuracy binomial
-    for n in [10, 50, 100, 500, 1000, 5000]:

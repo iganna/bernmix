@@ -15,6 +15,7 @@ from multiprocess import Pool
 import numpy as np
 import itertools as it
 import bernmix_double.bernmix_int as bmi
+from bernmix import exact_pmf
 
 
 def gen_double_distr(n, n_distr, pop_size,
@@ -35,53 +36,44 @@ def gen_double_distr(n, n_distr, pop_size,
         np.savetxt(path_to_out_folder + 'distr' + str(cnt).zfill(n_digits) + '_pop.txt', pop, fmt='%i')
 
 
+def exact_cdf_pop(path_disrt_folder, path_cdfs_folder, n_threads=1):
+    """
+    This function calculate CDF values for several Multivariate Bernoulli RVs
+    Paralleled
+    :param path_disrt_folder:
+    :param path_cdfs_folder:
+    :param n_threads:
+    :return:
+    """
 
+    def exact_cdf(file_pw):
+        """ Compute CDF for specific Multivatiate Bernoulli individuals (traget_indivs) """
 
-
-def xxx():
-    def cdfs(i_distr):
-        def calc_prob(indiv, probs):
-            prob_multiply = list(map(lambda i: probs[i] if indiv[i] == 1 else (1 - probs[i]),
-                                     range(30)))
-            return np.prod(prob_multiply)
-
-        file_dir_pw = 'test_examples_n0030/'
-        pw = np.loadtxt(file_dir_pw + 'distr' + str(i_distr).zfill(2) + '_pw.txt')
+        pw = np.loadtxt(file_pw)
         probs = pw[0]
         weights = pw[1]
+        pmf, outcomes = exact_pmf(probs, weights)
 
-        target_indivs = np.loadtxt(file_dir_pw + 'distr' + str(i_distr).zfill(2) + '_pop.txt').astype(int)
-        indiv_values = np.zeros(2 ** 30)
-        indiv_probs = np.zeros(2 ** 30)
-
-        indiv_values[0:2] = [0, weights[0]]
-        indiv_probs[0] = calc_prob(np.zeros(30), probs)
-        indiv_probs[1] = calc_prob(np.append([1], np.zeros(29)), probs)
-
-        for i in range(1, 30):
-            print(i)
-            n = 2 ** i
-            indiv_values[n:2 * n] = indiv_values[0:n] + weights[i]
-            indiv_probs[n:2 * n] = indiv_probs[0:n] / (1 - probs[i]) * probs[i]
-
-        print('Proc', i_distr, 'pmf is computed')
-
+        # Load target population of Multiv-Bern individuals
+        # Compute their weighted outcomes (values) and corresponding CDFs
+        file_pop = file_pw[:-len('pw.txt')] + 'pop.txt'
+        target_indivs = np.loadtxt(file_pop)
         target_values = list(map(lambda x: np.dot(x, weights), target_indivs))
+        target_cdfs = list(map(lambda value: sum(pmf[outcomes <= value]), target_values))
 
-        cdfs = list(map(lambda x: sum(indiv_probs[indiv_values <= x]), target_values))
+        file_cdfs = file_pw[:-len('pw.txt')] + 'exact.txt'
 
-        file_dir_res = 'res_examples_n0030/'
+        np.savetxt(path_cdfs_folder + file_cdfs,
+                   target_cdfs, fmt='%.16f')
 
-        np.savetxt(file_dir_res + 'distr' + str(i_distr).zfill(2) + '_exact.txt',
-                   cdfs, fmt='%.16f')
+    #path_disrt_folder = 'tests/data_test_precision/distr_d_weights_n0500/'
 
-        print('Proc', i_distr, 'is ended')
-
-    n_disrt = 20
-
-    with Pool(10) as workers:
+    files = glob.glob(path_disrt_folder + '*_pw.txt')
+    with Pool(n_threads) as workers:
         pmap = workers.map
-        pmap(cdfs, range(n_disrt))
+        pmap(exact_cdf, files)
+
+
 
 
 if __name__ == '__main__':

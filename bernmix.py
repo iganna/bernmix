@@ -8,23 +8,114 @@ __maintainer__ = "Anna Igolkina"
 __email__ = "igolkinaanna11@gmail.com"
 __status__ = "Development"
 
+__all__ = ["bernmix_pmf_int", "bernmix_cdf_double"]
+
 import bernmix_double.bernmix_double as bmd
 import bernmix_int.bernmix_int as bmi
+import numpy as np
+
+def normalise_params(probs, weights):
+    """
+    This function normalises parameters of probabilities and weights as to make weights positive
+    :param probs: vector of probabilities
+    :param weights: vector of weights
+    :return: sum of negative weights
+    """
+    sum_neg_weights = sum([w for w in weights if w < 0])
+
+    probs = [p * (w > 0) + (1 - p) * (w < 0) for p, w in zip(probs, weights)]
+    weights = [abs(w) for w in weights]
+
+    # if some weights == 0
+    # if some probabilities == 0
+
+    return probs, weights, sum_neg_weights
+
+def exact_int_pmf(probs, weights):
+    """
+    This function caclulates pmf fpr each individual by convolution
+    :param probs: vector of probabilities
+    :param weights: vector of weights
+    :return: probabilities and outcomes
+    """
+    if len(probs) != len(weights):
+        raise ValueError('Vectors of probabilities and weights must be the same length')
+    if len(probs) == 0:
+        raise ValueError('Sum of BRVs should contain at least one RV')
+
+    prob_indiv, outcomes = exact_prob_indiv(probs, weights)
+    pmf_bm = [sum(prob_indiv[outcomes == i]) for i in range(0, sum(weights) + 1)]
+    return pmf_bm
 
 
+def exact_prob_indiv(probs, weights):
+    """
+    This function caclulates probabilities for each outcome
+    :param probs: vector of probabilities
+    :param weights: vector of weights
+    :return: probabilities and outcomes
+    """
+    def comp_indiv_prob(indiv, probs):
+        """ Compute probability for an individual """
+        n = len(probs)
+        prob_multiply = list(map(lambda i: probs[i] if indiv[i] == 1 else (1 - probs[i]),
+                                 range(n)))
+        return np.prod(prob_multiply)
 
-def bernmix_pmf_int(probs, weights):
+    if len(probs) != len(weights):
+        raise ValueError('Vectors of probabilities and weights must be the same length')
+    if len(probs) == 0:
+        raise ValueError('Sum of BRVs should contain at least one RV')
+
+    n = len(probs)
+    # initialise size of outcomes
+    outcomes = np.zeros(2 ** n)
+    prob_indiv = np.zeros(2 ** n)
+
+    # initialise two first of outcomes (0,0,...0) and (1,0,...0)
+    outcomes[0:2] = [0, weights[0]]
+    prob_indiv[0] = comp_indiv_prob(np.zeros(n), probs)
+    prob_indiv[1] = comp_indiv_prob(np.append([1], np.zeros(n-1)), probs)
+
+    for i in range(1, n):
+        n = 2 ** i
+        outcomes[n:2 * n] = outcomes[0:n] + weights[i]
+        prob_indiv[n:2 * n] = prob_indiv[0:n] / (1 - probs[i]) * probs[i]
+
+    return prob_indiv, outcomes
+
+
+def bernmix_pmf_int(probs, weights, outcomes=None):
     """
     This function reputrn the vector of probabilities for possible values
     of the weighted sum of Bernoulli random variables
     when weights are integer
     :param probs:
     :param weights:
+    :param outcomes:
     :return: The PMF across all possible values
     """
-    pass
+    if len(probs) != len(weights):
+        raise ValueError('Vectors of probabilities and weights must be the same length')
+    if len(probs) == 0:
+        raise ValueError('Sum of BRVs should contain at least one RV')
+    if sum((0 > probs) | (probs > 1)):
+        raise ValueError('Probabilities should be within [0 1] segment')
 
-def bernmix_cdf_double(probs, weights, target_value, n_points = None):
+    # ANNA
+    # if weighas are integer
+    # if outcomes are integer
+
+    probs, weights, sum_neg_weights = normalise_params(probs, weights)
+    pmf_bm = bmi.pmf(probs, weights)
+
+    if outcomes in None:
+        return pmf_bm
+    else:
+        return pmf_bm[outcomes + sum_neg_weights]
+
+
+def bernmix_cdf_double(probs, weights, target_indiv, m=10**6, l=100):
     """
     This function reputrn the vector of probabilities for possible values
     of the weighted sum of Bernoulli random variables
@@ -35,18 +126,8 @@ def bernmix_cdf_double(probs, weights, target_value, n_points = None):
     :param n_points: a number of point to approximate distribution
     :return: the CDF in target_value
     """
+    pass
 
-    # chech whether the target value is a vector of Bernoulli or the double value
-
-    # if n_point is a single number then - use it
-    # if n_point is a list of two - use it as a range for search M
-
-    if n_points is None:
-        # envoke genetic algorithm
-        pass
-    else:
-        # evoke with rounding to n_points
-        pass
 
 def poibinmix_pmf_int(probs, wights):
     """

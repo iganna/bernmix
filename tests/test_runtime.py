@@ -65,8 +65,6 @@ def gen_int_distr(grid_for_n, grid_for_weight_sum,
         yield '{}\t{}\t{}'.format(cnt, n, weight_sum)
 
 
-
-
 def time_measuring(path_to_folder_distr, path_to_folder_time, n_threads):
     """
 
@@ -93,7 +91,7 @@ def time_measuring(path_to_folder_distr, path_to_folder_time, n_threads):
         distr_name = file.split('/')[2]
         np.savetxt(path_to_folder_time + 'time_' + distr_name, [t1], fmt='%0.8f')
 
-    # create out folder if it does not exists
+    # create out folder if it does not exist
     if not os.path.exists(path_to_folder_time):
         os.makedirs(path_to_folder_time)
 
@@ -115,7 +113,7 @@ if __name__ == '__main__':
     grid_for_weight_sum = np.round(ten_in_power(np.arange(3, 6.1, 1))).astype(int)
     path_to_out_folder = path_to_folder_distr + 'distr_var_n_'
     info = gen_int_distr(grid_for_n, grid_for_weight_sum,
-                              n_repeats, path_to_out_folder)
+                         n_repeats, path_to_out_folder)
     np.savetxt(path_to_folder_distr + 'info_var_n.csv',
                list(info), '%s')
 
@@ -124,7 +122,7 @@ if __name__ == '__main__':
     grid_for_weight_sum = np.round(ten_in_power(np.arange(3, 8, 0.2))).astype(int)
     path_to_out_folder = path_to_folder_distr + 'distr_var_w_'
     info = gen_int_distr(grid_for_n, grid_for_weight_sum,
-                              n_repeats, path_to_out_folder)
+                         n_repeats, path_to_out_folder)
     np.savetxt(path_to_folder_distr + 'info_var_w.csv',
                list(info), '%s')
 
