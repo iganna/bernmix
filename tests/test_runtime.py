@@ -105,26 +105,26 @@ if __name__ == '__main__':
 
     path_to_folder_distr = 'tests/data_test_runtime/'
     path_to_folder_time = 'tests/res_test_runtime/'
-
-    n_repeats = 10
-
-    # generate distributions when n varies while sum of weights is fixed
-    grid_for_n = np.round(ten_in_power(np.arange(1, 4.1, 0.2))).astype(int)
-    grid_for_weight_sum = np.round(ten_in_power(np.arange(3, 6.1, 1))).astype(int)
-    path_to_out_folder = path_to_folder_distr + 'distr_var_n_'
-    info = gen_int_distr(grid_for_n, grid_for_weight_sum,
-                         n_repeats, path_to_out_folder)
-    np.savetxt(path_to_folder_distr + 'info_var_n.csv',
-               list(info), '%s')
-
-    # generate distributions when n is fixed while sum of weights varies
-    grid_for_n = np.round(ten_in_power(np.arange(2, 4.1, 1))).astype(int)
-    grid_for_weight_sum = np.round(ten_in_power(np.arange(3, 8, 0.2))).astype(int)
-    path_to_out_folder = path_to_folder_distr + 'distr_var_w_'
-    info = gen_int_distr(grid_for_n, grid_for_weight_sum,
-                         n_repeats, path_to_out_folder)
-    np.savetxt(path_to_folder_distr + 'info_var_w.csv',
-               list(info), '%s')
+    #
+    # n_repeats = 10
+    #
+    # # generate distributions when n varies while sum of weights is fixed
+    # grid_for_n = np.round(ten_in_power(np.arange(1, 4.1, 0.2))).astype(int)
+    # grid_for_weight_sum = np.round(ten_in_power(np.arange(3, 6.1, 1))).astype(int)
+    # path_to_out_folder = path_to_folder_distr + 'distr_var_n_'
+    # info = gen_int_distr(grid_for_n, grid_for_weight_sum,
+    #                      n_repeats, path_to_out_folder)
+    # np.savetxt(path_to_folder_distr + 'info_var_n.csv',
+    #            list(info), '%s')
+    #
+    # # generate distributions when n is fixed while sum of weights varies
+    # grid_for_n = np.round(ten_in_power(np.arange(2, 4.1, 1))).astype(int)
+    # grid_for_weight_sum = np.round(ten_in_power(np.arange(3, 6.1, 0.2))).astype(int)
+    # path_to_out_folder = path_to_folder_distr + 'distr_var_w_'
+    # info = gen_int_distr(grid_for_n, grid_for_weight_sum,
+    #                      n_repeats, path_to_out_folder)
+    # np.savetxt(path_to_folder_distr + 'info_var_w.csv',
+    #            list(info), '%s')
 
     # timing
     n_threads = 10
