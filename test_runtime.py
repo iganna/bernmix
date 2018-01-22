@@ -17,7 +17,7 @@ import os
 from multiprocess import Pool
 import numpy as np
 import itertools as it
-import bernmix_int.bernmix_int as bmi
+from bernmix_int import bernmix_int as bmi
 
 
 
