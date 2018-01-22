@@ -8,6 +8,9 @@ and measures the run-time
 __author__ = "Anna Igolkina"
 __all__ = ["gen_int_distr", "time_measuring"]
 
+import sys
+sys.path.append('../bernmix_int')
+
 import time
 import glob
 import os
@@ -15,6 +18,7 @@ from multiprocess import Pool
 import numpy as np
 import itertools as it
 import bernmix_int.bernmix_int as bmi
+
 
 
 def ten_in_power(powers):
