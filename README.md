@@ -12,7 +12,7 @@ i.ni.d. - independent non-identically distributed
 
 ## Description
 
-The BernMix package includes two efficient algorithms to calculate the exact distribution of a weighted sum of i.ni.d. Bernoulli random variables (BRVs) – the first is for integer weights and the second is for non-integer weights. The discussed distribution includes, as particular cases, Binomial and Poisson Binomial distributions together with their linear combinations. For integer weights we present the algorithm to calculate a PMF and a CDF of a weighted sum of BRVs utilising the Discrete Fourier transform of the characteristic function. For non-integer weights we suggest the heuristic approach to compute pointwise CDF using rounding and integer linear programming.  
+The BernMix package includes two efficient algorithms to calculate the exact distribution of a weighted sum of i.ni.d. BRV – the first is for integer weights and the second is for non-integer weights. The discussed distribution includes, as particular cases, Binomial and Poisson Binomial distributions together with their linear combinations. For integer weights we present the algorithm to calculate a PMF and a CDF of a weighted sum of BRVs utilising the Discrete Fourier transform of the characteristic function. For non-integer weights we suggest the heuristic approach to compute pointwise CDF using rounding and integer linear programming.  
   
 The BernMix package provides a Python implementation of the algorithms to calculate PMFs and CDFs for both cases (integer and non-integer weights); C++ library for using Fast Fourier transform is wrapped with Cython. We analyse the time complexity of the algorithms and demonstrate their performance and accuracy.  
 
@@ -27,7 +27,7 @@ The BernMix package provides a Python implementation of the algorithms to calcul
 
 ## Requirements
 
-To run BernMix methods you need Python 3.4 or later. A list of required Python packages that the BernMix depend on are in `requirements.txt`.  
+To run BernMix methods you need Python 3.4 or later. A list of required Python packages that the BernMix depend on, are in `requirements.txt`.  
 The BernMix also required the [FFTW3](http://www.fftw.org/download.html) library (a C library for computing the discrete Fourier transform).
 
 ## Installation
@@ -41,7 +41,7 @@ python setup.py install
 
 ## Running the tests
 
-To demonstrate the use of methods we created a Python notebook `bernmix_demo.ipynb`.
+To demonstrate the use of methods we created a Python notebook `bernmix_demo.ipynb`.  
 All tests that were used in the below article, are presented in a Python notebook `bernmix_test.ipynb` and in a R notebook `gpb_test.ipynb`
 
 ## References

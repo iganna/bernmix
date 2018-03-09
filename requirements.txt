@@ -1,0 +1,5 @@
+cvxopt==1.1.9
+dill==0.2.7.1
+multiprocess==0.70.5
+numpy==1.14.1
+scipy==1.0.0
