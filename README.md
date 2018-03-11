@@ -35,14 +35,16 @@ The BernMix also required the [FFTW3](http://www.fftw.org/download.html) library
 To install the BernMix package, run the following commands:
 ```
 git clone https://github.com/iganna/bernmix.git
-cd bernmix
+cd bernmix/bernmix_int
+make
+cd ..
 python setup.py install
 ```
 
 ## Running the tests
 
-To demonstrate the use of methods we created a Python notebook `bernmix_demo.ipynb`.  
-All tests that were used in the below article, are presented in a Python notebook `bernmix_test.ipynb` and in a R notebook `gpb_test.ipynb`
+To demonstrate the use of methods we created a Python notebook `tests/bernmix_demo.ipynb`.  
+All tests that were used in the below article, are presented in a Python notebook `tests/bernmix_test.ipynb` and in a R notebook `tests/gpb_test.ipynb`
 
 ## References
 

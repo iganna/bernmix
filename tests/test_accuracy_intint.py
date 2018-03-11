@@ -6,21 +6,30 @@ and measures the run-time
 """
 
 __author__ = "Anna Igolkina"
-__all__ = ["gen_special_int_distr", ]
+__license__ = "MIT"
+__version__ = "0.1"
+__maintainer__ = "Anna Igolkina"
+__email__ = "igolkinaanna11@gmail.com"
+
+__all__ = ["accuracy_binom_distr",
+           "accuracy_poibin_distr",
+           "gen_special_int_distr",
+           "accuracy_special_int_distr"]
 
 
 import re
 import glob
 import os
-from multiprocess import Pool
+
 import numpy as np
 import math
 import scipy.stats as st
-from scipy.stats import binom
 import itertools as it
+from multiprocess import Pool
+
 import bernmix_int.bernmix_int as bmi
 from tests.poibin import PoiBin
-from bernmix import exact_int_pmf
+from bernmix import conv_pmf_int
 
 
 def error_mn(p1, p2):
@@ -28,6 +37,7 @@ def error_mn(p1, p2):
     Maximum norm (MN) of difference between distributions
     """
     return max(abs(p1-p2))
+
 
 def error_rss(p1, p2):
     """
@@ -52,7 +62,7 @@ def accuracy_binom_distr(n_range,
             weights = np.ones(n)
             p = np.random.rand(1)
             probs = np.repeat(p, n)
-            pmf_exact = binom.pmf(range(0, n + 1), n, p)
+            pmf_exact = st.binom.pmf(range(0, n + 1), n, p)
             pmf_bermnix = bmi.pmf(probs, weights)
             mn += error_mn(pmf_bermnix, pmf_exact)
             rss += error_rss(pmf_bermnix, pmf_exact)
@@ -137,7 +147,8 @@ def gen_special_int_distr(n_range,
 
 
 def accuracy_special_int_distr(n_range,
-                               path_distr_folder, path_accuracy_folder,
+                               path_distr_folder,
+                               path_accuracy_folder,
                                n_threads):
     """
     Comparisson of a PMF computed by convolution and computed by bernmix
@@ -159,7 +170,7 @@ def accuracy_special_int_distr(n_range,
         pw = np.loadtxt(file_pw)
         probs = pw[0]
         weights = pw[1]
-        pmf_exact = exact_int_pmf(probs, weights)
+        pmf_exact = conv_pmf_int(probs, weights)
         pmf_bermnix = bmi.pmf(probs, weights)
 
         mn = error_mn(pmf_bermnix, pmf_exact)
@@ -190,31 +201,29 @@ def accuracy_special_int_distr(n_range,
 
 if __name__ == '__main__':
 
-
-    # Accuracy for Binomial and Poisson Binomial distributions
-    n_range = [10, 50, 100, 500, 1000, 5000]
-    n_repeats = 10
-    results_binom = accuracy_binom_distr(n_range, n_repeats)
-    results_poibin = accuracy_poibin_distr(n_range, n_repeats)
-    # Save results
-    path_accuracy_binpoibin = 'tests/data_test_precision/accuracy_bin_poibin/'
-    if not os.path.exists(path_accuracy_binpoibin):
-        os.makedirs(path_accuracy_binpoibin)
-    np.savetxt(path_accuracy_binpoibin + 'results_binom.txt', results_binom, '%s')
-    np.savetxt(path_accuracy_binpoibin + 'results_poibin.txt', results_poibin, '%s')
-
-    # Generate distributions with specifically distributed weights
-    path_distr_folder = 'tests/data_test_precision/distr_int_weights/'
-    n_range = [10, 20, 30]
-    n_repeats = 20
-    gen_special_int_distr(n_range,
-                          n_repeats,
-                          path_distr_folder)
-    # Calculate accuracy
-    n_threads = 10
-    accuracy_special_int_distr(n_range,
-                               path_distr_folder, path_distr_folder,
-                               n_threads)
-
+    # # Accuracy for Binomial and Poisson Binomial distributions
+    # n_range = [10, 50, 100, 500, 1000, 5000]
+    # n_repeats = 10
+    # results_binom = accuracy_binom_distr(n_range, n_repeats)
+    # results_poibin = accuracy_poibin_distr(n_range, n_repeats)
+    # # Save results
+    # path_accuracy_binpoibin = 'tests/data_test_precision/accuracy_bin_poibin/'
+    # if not os.path.exists(path_accuracy_binpoibin):
+    #     os.makedirs(path_accuracy_binpoibin)
+    # np.savetxt(path_accuracy_binpoibin + 'results_binom.txt', results_binom, '%s')
+    # np.savetxt(path_accuracy_binpoibin + 'results_poibin.txt', results_poibin, '%s')
+    #
+    # # Generate distributions with specifically distributed weights
+    # path_distr_folder = 'tests/data_test_precision/distr_int_weights/'
+    # n_range = [10, 20, 30]
+    # n_repeats = 20
+    # gen_special_int_distr(n_range,
+    #                       n_repeats,
+    #                       path_distr_folder)
+    # # Calculate accuracy
+    # n_threads = 10
+    # accuracy_special_int_distr(n_range,
+    #                            path_distr_folder, path_distr_folder,
+    #                            n_threads)
 
 
