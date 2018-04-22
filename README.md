@@ -27,10 +27,11 @@ The BernMix package provides a Python implementation of the algorithms to calcul
 
 ## Requirements
 
-To run BernMix methods you need Python 3.4 or later. A list of required Python packages that the BernMix depend on, are in `requirements.txt`.  
-The BernMix also required the [FFTW3](http://www.fftw.org/download.html) library (a C library for computing the discrete Fourier transform).
+To run BernMix methods you need Python 3.4 or later. A list of required Python packages that the BernMix depends on, are in `requirements.txt`.  
+The BernMix also required the [FFTW3](http://www.fftw.org/download.html) library (a C library for computing the discrete Fourier transform) and Cython.
 
 ## Installation
+
 
 To install the BernMix package, run the following commands:
 ```
@@ -39,6 +40,11 @@ cd bernmix/bernmix_int
 make
 cd ..
 python setup.py install
+```
+
+To install the requirements, please, run the following command:
+```
+pip install -r requirements.txt
 ```
 
 ## Running the tests
