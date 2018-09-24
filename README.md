@@ -36,9 +36,9 @@ The BernMix also required the [FFTW3](http://www.fftw.org/download.html) library
 To install the BernMix package, run the following commands:
 ```
 git clone https://github.com/iganna/bernmix.git
-cd bernmix/bernmix_int
+cd bernmix/bernmix/bernmix_int
 make
-cd ..
+cd ../..
 python setup.py install
 ```
 
