@@ -20,9 +20,9 @@ __all__ = ["normalise_params",
 
 import numpy as np
 
-from . import bernmix_int as bmi
-from . import bernmix_double as bmd
-from . import bernmix_control as control
+from .src import bernmix_int as bmi
+from .src import bernmix_double as bmd
+from .src import bernmix_control as control
 
 
 def normalise_params(probs, weights):

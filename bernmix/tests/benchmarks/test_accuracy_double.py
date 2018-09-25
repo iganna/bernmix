@@ -20,7 +20,7 @@ import glob
 import numpy as np
 from multiprocess import Pool
 
-from ..bernmix import conv_all_outcomes
+from ... bernmix import conv_all_outcomes
 
 
 def gen_double_distr(n, n_distr, pop_size, path_to_out_folder):

@@ -27,7 +27,7 @@ import scipy.stats as st
 import itertools as it
 from multiprocess import Pool
 
-import bernmix_int.bernmix_int as bmi
+from ...bernmix import bernmix_cdf_int, bernmix_pmf_int
 from .poibin import PoiBin
 from bernmix import conv_pmf_int
 
@@ -63,7 +63,7 @@ def accuracy_binom_distr(n_range,
             p = np.random.rand(1)
             probs = np.repeat(p, n)
             pmf_exact = st.binom.pmf(range(0, n + 1), n, p)
-            pmf_bermnix = bmi.pmf(probs, weights)
+            pmf_bermnix = bernmix_pmf_int(probs, weights)
             mn += error_mn(pmf_bermnix, pmf_exact)
             rss += error_rss(pmf_bermnix, pmf_exact)
 
@@ -88,7 +88,7 @@ def accuracy_poibin_distr(n_range,
             probs = np.random.rand(n)
             d = PoiBin(probs)
             pmf_exact = d.pmf(range(0, n + 1))
-            pmf_bermnix = bmi.pmf(probs, weights)
+            pmf_bermnix = bernmix_pmf_int(probs, weights)
             mn += error_mn(pmf_bermnix, pmf_exact)
             rss += error_rss(pmf_bermnix, pmf_exact)
 
@@ -171,7 +171,7 @@ def accuracy_special_int_distr(n_range,
         probs = pw[0]
         weights = pw[1]
         pmf_exact = conv_pmf_int(probs, weights)
-        pmf_bermnix = bmi.pmf(probs, weights)
+        pmf_bermnix = bernmix_pmf_int(probs, weights)
 
         mn = error_mn(pmf_bermnix, pmf_exact)
         rss = error_rss(pmf_bermnix, pmf_exact)
@@ -200,7 +200,7 @@ def accuracy_special_int_distr(n_range,
 
 
 if __name__ == '__main__':
-
+    pass
     # # Accuracy for Binomial and Poisson Binomial distributions
     # n_range = [10, 50, 100, 500, 1000, 5000]
     # n_repeats = 10

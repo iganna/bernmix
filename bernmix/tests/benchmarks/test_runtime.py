@@ -22,7 +22,7 @@ import numpy as np
 import itertools as it
 from multiprocess import Pool
 
-import bernmix_int.bernmix_int as bmi
+from ...bernmix import bernmix_pmf_int, bernmix_cdf_int
 
 
 def ten_in_power(powers):
@@ -58,7 +58,7 @@ def gen_int_distr(grid_for_n, grid_for_weight_sum,
 
         # define weights
         weights = np.random.rand(n)
-        weights = np.round(weights * weight_sum / sum(weights)).astype(int)
+        weights = weights / sum(weights) * weight_sum
 
         # no weights should be equal to zero
         weights[weights == 0] += 1
@@ -96,7 +96,7 @@ def time_measuring(path_to_folder_distr, path_to_folder_time, n_threads):
 
         # time measuring
         start1 = time.time()
-        bmi.pmf(probs, weights)
+        bernmix_pmf_int(probs, weights)
         end1 = time.time()
         t1 = end1 - start1
 
