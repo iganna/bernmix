@@ -2,27 +2,11 @@
 This module includes tools to compute PMFs and CDFs for weighted sum of Bernoulli RVs
 """
 
-__author__ = "Anna Igolkina"
-__license__ = "MIT"
-__version__ = "0.1"
-__maintainer__ = "Anna Igolkina"
-__email__ = "igolkinaanna11@gmail.com"
-__status__ = "Development"
-
-__all__ = ["normalise_params",
-           "bernmix_pmf_int",
-           "bernmix_cdf_int",
-           "bernmix_cdf_double",
-           "permut_cdf",
-           "conv_all_outcomes",
-           "conv_pmf_int"
-           ]
-
 import numpy as np
 
-from .src import bernmix_int as bmi
-from .src import bernmix_double as bmd
-from .src import bernmix_control as control
+from . import bernmix_control as control
+from . import bernmix_int as bmi
+from . import bernmix_double as bmd
 
 
 def normalise_params(probs, weights):
@@ -53,16 +37,16 @@ def normalise_params(probs, weights):
 
     # Remain only significant terms:
     # if some weights or probabilities equal to zero - remove
-    idx_significant = not ((probs == 0) | (weights == 0))
+    idx_significant = ~ ((probs == 0) | (weights == 0))
     probs = probs[idx_significant]
     weights = weights[idx_significant]
 
     # Remove constant RVs : BRVs with probabilities equal to 1
     # and change bias
     idx_const = probs == 1
-    sum_bias += weights(idx_const)
-    probs = probs[not idx_const]
-    weights = weights[not idx_const]
+    sum_bias += sum(weights[idx_const])
+    probs = probs[~ idx_const]
+    weights = weights[~ idx_const]
 
     return probs, weights, sum_bias
 
@@ -89,10 +73,10 @@ def bernmix_pmf_int(probs, weights, outcomes=None):
     probs, weights, sum_bias = normalise_params(probs, weights)
     pmf_bm = bmi.pmf(probs, weights)
 
-    if outcomes in None:
-        return pmf_bm
+    if outcomes is None:
+        return np.concatenate(([0] * sum_bias, pmf_bm))
     else:
-        return pmf_bm[outcomes + sum_bias]
+        return pmf_bm[outcomes - sum_bias]
 
 
 def bernmix_cdf_int(probs, weights, outcomes=None):
@@ -120,7 +104,7 @@ def bernmix_cdf_int(probs, weights, outcomes=None):
     pmf_bm = bmi.pmf(probs, weights)
     cdf_bm = np.cumsum(pmf_bm)
 
-    if outcomes in None:
+    if outcomes is None:
         return cdf_bm
     else:
         return cdf_bm[outcomes + sum_bias]
