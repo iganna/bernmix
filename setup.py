@@ -1,5 +1,7 @@
 # setup.py
-from setuptools import setup
+from setuptools import setup, find_packages
+from distutils.extension import Extension
+from Cython.Build import build_ext
 
 
 PACKAGE = "bernmix"
@@ -9,11 +11,19 @@ DESCRIPTION = "Methods to compute PMF and CDF values of a weighted sum of " \
 AUTHOR = "Anna Igolkina"
 AUTHOR_EMAIL = "igolkinaanna11@gmail.com"
 URL = "https://github.com/iganna/bernmix"
-VERSION = "0.1"
+VERSION = "0.8"
 
-with open('requirements.txt') as f:
-    reqs = f.read().splitlines()
+#with open('requirements.txt') as f:
+#    reqs = f.read().splitlines()
 
+
+src_dir = 'bernmix/bernmix_int'
+ext = Extension(src_dir + '.bernmix_int',
+                [src_dir + '/bernmix_int.pyx',
+                 src_dir + '/bernmix_fourier.c'],
+                libraries=['fftw3'],
+                extra_compile_args=["-lfftw3"])
+package_data = {'bernminx_int': ['*.pxd', '*.pyx', '*.c', '*.h']}
 
 setup(
     name=NAME,
@@ -23,8 +33,12 @@ setup(
     author_email=AUTHOR_EMAIL,
     license="MIT",
     url=URL,
-    packages=[PACKAGE],
-    install_requires=reqs,
+    packages=find_packages(),
+#    install_requires=reqs,
+    ext_modules=[ext],
+    cmdclass={'build_ext': build_ext},
+    package_data = package_data,
+    include_package_data=True, 
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Science/Research",
