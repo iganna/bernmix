@@ -73,8 +73,8 @@ def pmf_int_vals(probs, weights):
     probs, weights, sum_bias = normalise_params(probs, weights)
     pmf_bm = bmi.pmf(probs, weights)
 
-    values = list(range(0, len(pmf_bm) + 1))
-    values = [v - sum_bias for v in values]
+    values = list(range(0, len(pmf_bm)))
+    values = [v + sum_bias for v in values]
 
     return pmf_bm, values
 

@@ -11,7 +11,7 @@ DESCRIPTION = "Methods to compute PMF and CDF values of a weighted sum of " \
 AUTHOR = "Anna Igolkina"
 AUTHOR_EMAIL = "igolkinaanna11@gmail.com"
 URL = "https://github.com/iganna/bernmix"
-VERSION = "1.0"
+VERSION = "1.11"
 
 #with open('requirements.txt') as f:
 #    reqs = f.read().splitlines()
