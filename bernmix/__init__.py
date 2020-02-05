@@ -8,10 +8,11 @@ __email__ = "igolkinaanna11@gmail.com"
 __status__ = "Development"
 
 __all__ = ["normalise_params",
-           "bernmix_pmf_int",
-           "bernmix_cdf_int",
-           "bernmix_cdf_double",
-           "permut_cdf",
+           "pmf_int",
+           "pmf_int_vals",
+           "cdf_int",
+           "cdf_double",
+           "cdf_permut",
            "conv_all_outcomes",
            "conv_pmf_int"
            ]

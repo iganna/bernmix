@@ -51,7 +51,36 @@ def normalise_params(probs, weights):
     return probs, weights, sum_bias
 
 
-def bernmix_pmf_int(probs, weights, outcomes=None):
+def pmf_int_vals(probs, weights):
+    """
+    This function returns the PMF of the weighted sum of BRVs
+    when weights are integer
+    :param probs:
+    :param weights:
+    :param outcomes:
+    :return: The PMF across all possible values
+    """
+
+    # ----------------------------------------------
+    # Control Input values
+    # ----------------------------------------------
+    control.weights_dbl(weights)
+    control.probs(probs)
+    control.lengths(weights, probs)
+    # ----------------------------------------------
+
+    # remove trivial terms
+    probs, weights, sum_bias = normalise_params(probs, weights)
+    pmf_bm = bmi.pmf(probs, weights)
+
+    values = list(range(0, len(pmf_bm) + 1))
+    values = [v - sum_bias for v in values]
+
+    return pmf_bm, values
+
+
+
+def pmf_int(probs, weights, outcomes=None):
     """
     This function returns the PMF of the weighted sum of BRVs
     when weights are integer
@@ -74,12 +103,12 @@ def bernmix_pmf_int(probs, weights, outcomes=None):
     pmf_bm = bmi.pmf(probs, weights)
 
     if outcomes is None:
-        return np.concatenate(([0] * sum_bias, pmf_bm))
+        return pmf_bm
     else:
         return pmf_bm[outcomes - sum_bias]
 
 
-def bernmix_cdf_int(probs, weights, outcomes=None):
+def cdf_int(probs, weights, outcomes=None):
     """
     This function returns the CDF of the weighted sum of BRVs
     when weights are integer
@@ -110,8 +139,8 @@ def bernmix_cdf_int(probs, weights, outcomes=None):
         return cdf_bm[outcomes + sum_bias]
 
 
-def bernmix_cdf_double(probs, weights, target_indiv,
-                       m_rounding=10**6, n_solutions=None):
+def cdf_double(probs, weights, target_indiv,
+               m_rounding=10**6, n_solutions=None):
     """
     This function reputrn the vector of probabilities for possible values
     of the weighted sum of Bernoulli random variables
@@ -147,7 +176,7 @@ def bernmix_cdf_double(probs, weights, target_indiv,
     return cdf_value
 
 
-def permut_cdf(probs, weights, target_indivs, n_permut=10 ** 6):
+def cdf_permut(probs, weights, target_indivs, n_permut=10 ** 6):
     """
     Get CDF py permutations/simulations
     :param probs: A list of real numbers in the range [0,1]
