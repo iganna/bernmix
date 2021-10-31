@@ -13,8 +13,8 @@ AUTHOR_EMAIL = "igolkinaanna11@gmail.com"
 URL = "https://github.com/iganna/bernmix"
 VERSION = "1.11"
 
-#with open('requirements.txt') as f:
-#    reqs = f.read().splitlines()
+with open('requirements.txt') as f:
+    reqs = f.read().splitlines()
 
 
 src_dir = 'bernmix/bernmix_int'
@@ -34,7 +34,7 @@ setup(
     license="MIT",
     url=URL,
     packages=find_packages(),
-#    install_requires=reqs,
+    install_requires=reqs,
     ext_modules=[ext],
     cmdclass={'build_ext': build_ext},
     package_data = package_data,
