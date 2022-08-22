@@ -39,7 +39,7 @@ def weight_rounded(weights, m_points):
     return np.around(weights * c).astype(int)
 
 
-def cdf_rounded(probs, weights, target_indivs, m_rounding=10**6):
+def cdf_rounded(probs, weights, indiv, m_rounding=10**6):
     """
     This function calculates the CDF value for several individuals
     using fixed number of points to approximate
@@ -58,8 +58,8 @@ def cdf_rounded(probs, weights, target_indivs, m_rounding=10**6):
     # ----------------------------------------------
     control.weights_dbl(weights)
     control.probs(probs)
-    [control.individual(indiv) for indiv in target_indivs]
-    control.lengths(weights, probs, *target_indivs)
+    control.individual(indiv)
+    control.lengths(weights, probs, indiv)
     control.m_rounding(m_rounding, weights)
     # ----------------------------------------------
 
@@ -67,8 +67,7 @@ def cdf_rounded(probs, weights, target_indivs, m_rounding=10**6):
     weights_new = weight_rounded(weights, m_rounding)
     pmf = bmi.pmf(probs, weights_new)
 
-    target_values = map(lambda indiv: np.dot(weights_new, indiv).astype(int),
-                        target_indivs)
-    cdfs = [map(lambda value: sum(pmf[:(value+1)]), target_values)]
+    value = np.dot(weights_new, indiv).astype(int)
+    cdf_value = sum(pmf[:(value+1)])
 
-    return cdfs
+    return cdf_value

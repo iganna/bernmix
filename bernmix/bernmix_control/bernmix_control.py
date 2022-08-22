@@ -58,7 +58,7 @@ def individual(indiv):
     """
     if not isinstance(indiv, collections.Iterable):
         raise ValueError('Individual is not Iterable')
-    if not all([isinstance(t, numbers.Number) for t in indiv]):
+    if not all([isinstance(t, int) for t in indiv]):
         raise ValueError('Target individual does not contain all numbers')
     if not all([t in (0, 1) for t in indiv]):
         raise ValueError('Target individual is a vector of [0 and 1]')
@@ -82,13 +82,15 @@ def m_rounding(m, weights):
     if not isinstance(m, int):
         raise ValueError('M for rounding should be an integer number')
     if m < len(weights):
-        raise ValueError('M is lower than number of items in a sum')
+        raise ValueError('M is lower than sum of weights')
 
 
 def n_solutions(n):
     """
     Control the L-value for correction
     """
+    if n is None:
+        return
     if not isinstance(n, int):
         raise ValueError('N for linear programming should be an integer number')
     if n <= 0:

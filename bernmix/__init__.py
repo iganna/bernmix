@@ -7,12 +7,15 @@ __maintainer__ = "Anna Igolkina"
 __email__ = "igolkinaanna11@gmail.com"
 __status__ = "Development"
 
-__all__ = ["normalise_params",
-           "pmf_int",
-           "pmf_int_vals",
+__all__ = ["pmf_int",
            "cdf_int",
            "cdf_double",
            "cdf_permut",
-           "conv_all_outcomes",
-           "conv_pmf_int"
+           "normalise_params",
+           # "conv_all_outcomes",
+           "pmf_int_dep",
+           "pmf_int_bf",
+           "pmf_int_conv",
+           "pmf_int_joint",
+           "pmf_int_prod"
            ]

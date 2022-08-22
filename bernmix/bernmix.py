@@ -7,12 +7,31 @@ import numpy as np
 from . import bernmix_control as control
 from . import bernmix_int as bmi
 from . import bernmix_double as bmd
+from . import bernmix_fancy as bm_new
+
+
+def get_summary(pmf_bm, sum_bias, outcomes = None):
+    """
+    Prepare output data for PMF
+    :param pmf_bm:
+    :param sum_bias:
+    :param outcomes:
+    :return:
+    """
+    if outcomes is None:
+        values = [v + sum_bias for v in range(0, len(pmf_bm))]
+        return pmf_bm, values
+    else:
+        return pmf_bm[outcomes - sum_bias], outcomes
 
 
 def normalise_params(probs, weights):
     """
     This function normalises parameters of probabilities and weights
-    as to make weights positive
+    as to
+    (1) make weights positive
+    (2) remove trivial terms, probability = 0
+    (3) remove shifting terms, probability = 1
     :param probs: vector of probabilities
     :param weights: vector of weights
     :return: tuple of * new probabilities
@@ -31,52 +50,54 @@ def normalise_params(probs, weights):
     sum_bias = sum([w for w in weights if w < 0])
 
     # BRV with negative weight is transformed to BRV with opposite probability
-    probs = np.array([p * (w > 0) + (1 - p) * (w < 0)
-                      for p, w in zip(probs, weights)])
-    weights = np.array([abs(w) for w in weights])
+    probs = [p if w > 0 else 1 - p
+                      for p, w in zip(probs, weights)]
+    weights = [abs(w) for w in weights]
 
     # Remain only significant terms:
     # if some weights or probabilities equal to zero - remove
-    idx_significant = ~ ((probs == 0) | (weights == 0))
-    probs = probs[idx_significant]
-    weights = weights[idx_significant]
+    idx_significant = [False if (p == 0) | (w == 0) else True for p, w in zip(probs, weights)]
+
+
+    probs = [p for p, i in zip(probs, idx_significant) if i]
+    weights = [w for w, i in zip(weights, idx_significant) if i]
 
     # Remove constant RVs : BRVs with probabilities equal to 1
     # and change bias
-    idx_const = probs == 1
-    sum_bias += sum(weights[idx_const])
-    probs = probs[~ idx_const]
-    weights = weights[~ idx_const]
+    idx_const = [p == 1 for p in probs]
+    sum_bias += sum([w for w, i in zip(weights, idx_const) if i])
+    probs = [p for p, i in zip(probs, idx_const) if not i]
+    weights = [w for w, i in zip(weights, idx_const) if not i]
 
-    return probs, weights, sum_bias
+    return list(probs), list(weights), sum_bias
 
 
-def pmf_int_vals(probs, weights):
-    """
-    This function returns the PMF of the weighted sum of BRVs
-    when weights are integer
-    :param probs:
-    :param weights:
-    :param outcomes:
-    :return: The PMF across all possible values
-    """
-
-    # ----------------------------------------------
-    # Control Input values
-    # ----------------------------------------------
-    control.weights_dbl(weights)
-    control.probs(probs)
-    control.lengths(weights, probs)
-    # ----------------------------------------------
-
-    # remove trivial terms
-    probs, weights, sum_bias = normalise_params(probs, weights)
-    pmf_bm = bmi.pmf(probs, weights)
-
-    values = list(range(0, len(pmf_bm)))
-    values = [v + sum_bias for v in values]
-
-    return pmf_bm, values
+# def pmf_int_vals(probs, weights):
+#     """
+#     This function returns the PMF of the weighted sum of BRVs
+#     when weights are integer
+#     :param probs:
+#     :param weights:
+#     :param outcomes:
+#     :return: The PMF across all possible values
+#     """
+#
+#     # ----------------------------------------------
+#     # Control Input values
+#     # ----------------------------------------------
+#     control.weights_dbl(weights)
+#     control.probs(probs)
+#     control.lengths(weights, probs)
+#     # ----------------------------------------------
+#
+#     # remove trivial terms
+#     probs, weights, sum_bias = normalise_params(probs, weights)
+#     pmf_bm = bmi.pmf(probs, weights)
+#
+#     values = list(range(0, len(pmf_bm)))
+#     values = [v + sum_bias for v in values]
+#
+#     return pmf_bm, values
 
 
 
@@ -102,11 +123,82 @@ def pmf_int(probs, weights, outcomes=None):
     probs, weights, sum_bias = normalise_params(probs, weights)
     pmf_bm = bmi.pmf(probs, weights)
 
-    if outcomes is None:
-        return pmf_bm
-    else:
-        return pmf_bm[outcomes - sum_bias]
+    return get_summary(pmf_bm, sum_bias, outcomes)
 
+
+def pmf_int_conv(probs, weights, outcomes=None):
+    """
+    This function returns the PMF of the weighted sum of BRVs
+    when weights are integer
+    :param probs:
+    :param weights:
+    :param outcomes:
+    :return: The PMF across all possible values
+    """
+
+    # ----------------------------------------------
+    # Control Input values
+    # ----------------------------------------------
+    control.weights_dbl(weights)
+    control.probs(probs)
+    control.lengths(weights, probs)
+    # ----------------------------------------------
+
+    # remove trivial terms
+    probs, weights, sum_bias = normalise_params(probs, weights)
+    pmf_bm = bm_new.dp_int(probs, weights)
+
+    return get_summary(pmf_bm, sum_bias, outcomes)
+
+
+def pmf_int_conv_fast(probs, weights, outcomes=None):
+    """
+    This function returns the PMF of the weighted sum of BRVs
+    when weights are integer
+    :param probs:
+    :param weights:
+    :param outcomes:
+    :return: The PMF across all possible values
+    """
+
+    # ----------------------------------------------
+    # Control Input values
+    # ----------------------------------------------
+    control.weights_dbl(weights)
+    control.probs(probs)
+    control.lengths(weights, probs)
+    # ----------------------------------------------
+
+    # remove trivial terms
+    probs, weights, sum_bias = normalise_params(probs, weights)
+    pmf_bm = bm_new.dp_int_fast(probs, weights)
+
+    return get_summary(pmf_bm, sum_bias, outcomes)
+
+
+def pmf_int_dep(probs, weights, cov):
+    """
+    This function returns the PMF of the weighted sum of BRVs
+    when weights are integer
+    :param probs: pro
+    :param weights:
+    :param cov: covariance matrix
+    :return: The PMF across all possible values
+    """
+
+    # ----------------------------------------------
+    # Control Input values
+    # ----------------------------------------------
+    control.weights_dbl(weights)
+    control.probs(probs)
+    control.lengths(weights, probs)
+    # ----------------------------------------------
+
+    # remove trivial terms
+    probs, weights, sum_bias = normalise_params(probs, weights)
+    pmf_bm = bm_new.dyn_tree_cov(probs, weights, cov)
+
+    return get_summary(pmf_bm, sum_bias)
 
 def cdf_int(probs, weights, outcomes=None):
     """
@@ -133,10 +225,7 @@ def cdf_int(probs, weights, outcomes=None):
     pmf_bm = bmi.pmf(probs, weights)
     cdf_bm = np.cumsum(pmf_bm)
 
-    if outcomes is None:
-        return cdf_bm
-    else:
-        return cdf_bm[outcomes + sum_bias]
+    return get_summary(cdf_bm, sum_bias, outcomes)
 
 
 def cdf_double(probs, weights, target_indiv,
@@ -176,7 +265,7 @@ def cdf_double(probs, weights, target_indiv,
     return cdf_value
 
 
-def cdf_permut(probs, weights, target_indivs, n_permut=10 ** 6):
+def cdf_permut(probs, weights, target_indiv, n_permut=10 ** 6):
     """
     Get CDF py permutations/simulations
     :param probs: A list of real numbers in the range [0,1]
@@ -193,8 +282,8 @@ def cdf_permut(probs, weights, target_indivs, n_permut=10 ** 6):
     # ----------------------------------------------------
     control.weights_dbl(weights)
     control.probs(probs)
-    [control.individual(indiv) for indiv in target_indivs]
-    control.lengths(weights, probs, *target_indivs)
+    control.individual(target_indiv)
+    control.lengths(weights, probs, target_indiv)
     control.n_solutions(n_permut)
     # ----------------------------------------------------
 
@@ -208,18 +297,17 @@ def cdf_permut(probs, weights, target_indivs, n_permut=10 ** 6):
     pop_values = list(map(lambda indiv: np.dot(weights, indiv), pop))
 
     # Compute outcomes of the weighted sum of BRVs for the target individuals
-    target_values = map(lambda indiv: np.dot(weights, indiv), target_indivs)
+    target_value = np.dot(weights, target_indiv)
 
     # Compute the approximation of CDF for target_values
-    cdfs = [map(lambda value: sum(pop_values <= value) / n_permut,
-                target_values)]
+    cdf_value = sum(pop_values <= target_value) / n_permut
 
-    return cdfs
+    return cdf_value
 
 
-def conv_pmf_int(probs, weights):
+def pmf_int_bf(probs, weights):
     """
-    This function caclulates pmf fpr each individual by convolution
+    This function caclulates pmf fpr each individual by brute-force search
     :param probs: A list of real numbers in the range [0,1]
                  representing probabilities of BRVs
     :param weights: A list of numbers; weights in a weighted sum of BRVs
@@ -235,9 +323,11 @@ def conv_pmf_int(probs, weights):
     # ----------------------------------------------
 
     prob_indiv, outcomes = conv_all_outcomes(probs, weights)
+    outcomes_unique = list(set(outcomes))
+    outcomes_unique.sort()
     pmf_bm = [sum(prob_indiv[outcomes == i])
-              for i in range(0, sum(weights) + 1)]
-    return pmf_bm
+              for i in outcomes_unique]
+    return pmf_bm, outcomes_unique
 
 
 def conv_all_outcomes(probs, weights):
@@ -278,6 +368,75 @@ def conv_all_outcomes(probs, weights):
         prob_indiv[n:2 * n] = prob_indiv[0:n] / (1 - probs[i]) * probs[i]
 
     return prob_indiv, outcomes
+
+
+
+def pmf_int_joint(probs, w_vec, v = None, tol = 1e-5):
+    """
+    Function to predict joint distribution of
+    :param p: pribabilities of Bernoulli RVs
+    :param w_vec: vector of vectors of weights for RVs
+    :param tol: tolerance
+    :return:
+    """
+    # Checks
+    # TODO
+
+    # -----------------------------------
+    # Preparation
+    # -----------------------------------
+
+    # Algorithm
+
+
+    w_max = [sum(w) + 1 for w in w_vec]
+    m_max = np.cumprod(w_max)
+
+    w_new = w_vec[0]
+    for i in range(1, len(w_vec)):
+        w_new = [w1 + w2 * m_max[i-1] for w1, w2 in zip(w_new, w_vec[i])]
+
+    if v is None:
+        s = pmf_int(probs, w_new)
+    else:
+        s = pmf_int_dep(probs, w_new, v)
+
+
+    res = [[p, val] for p, val in zip(s[0], s[1]) if p > tol]
+    prob_sum = sum([p for p, _ in res])
+    res = [[p / prob_sum, val] for p, val in res]
+
+    res_brv = []
+    for p, val in res:
+        y = []
+        for j in range(len(w_max)):
+            y_tmp = val % w_max[j]
+            y += [y_tmp]
+            val -= y_tmp
+            val /= w_max[j]
+            val = round(val)
+        res_brv += [[p] + [y]]
+
+    pmf = [p for p, v in res_brv]
+    outcomes = [v for p, v in res_brv]
+
+    return pmf, outcomes
+
+
+def pmf_int_prod(probs, w_vec, v=None, tol=1e-5):
+
+    pmf_joint, outcomes_joint = pmf_int_joint(probs, w_vec, v, tol)
+    pmf_joint = np.array(pmf_joint)
+    outcomes_joint = np.array(outcomes_joint)
+
+    outcomes = [np.prod(vals) for vals in outcomes_joint]
+    outcomes_unique = list(set(outcomes))
+    outcomes_unique.sort()
+
+    pmf_unique = [sum(pmf_joint[outcomes == i]) for i in outcomes_unique]
+
+    return pmf_unique, outcomes_unique
+
 
 #
 # def poibinmix_pmf_int(probs, wights):

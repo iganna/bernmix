@@ -1,0 +1,5 @@
+include bernmix/requirements.txt
+include bernmix/bernmix_int/*.c
+include bernmix/bernmix_int/*.h
+
+
