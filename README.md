@@ -1,28 +1,38 @@
 # BernMix
 
-Computation of PMF and CDF for a weighted sum of i.ni.d. Bernoulli random variables
+Computation of PMF and CDF for a weighted sum of dependent and independent ni.d. Bernoulli random variables
 
 **Abbreviations**
 
 BRV - Bernoulli Random variable  
 PMF -  Probability mass function  
 CDF - Cumulative distribution function  
-i.ni.d. - independent non-identically distributed 
+ni.d. - independent non-identically distributed 
 
 
 ## Description
 
-The BernMix package includes two efficient algorithms to calculate the exact distribution of a weighted sum of i.ni.d. BRV – the first is for integer weights and the second is for non-integer weights. The discussed distribution includes, as particular cases, Binomial and Poisson Binomial distributions together with their linear combinations. For integer weights we present the algorithm to calculate a PMF and a CDF of a weighted sum of BRVs utilising the Discrete Fourier transform of the characteristic function. For non-integer weights we suggest the heuristic approach to compute pointwise CDF using rounding and integer linear programming.  
+The BernMix package includes two efficient algorithms to calculate the exact distribution of a weighted sum of ni.d. BRV – the first is for integer weights and the second is for non-integer weights. The discussed distribution includes, as particular cases, Binomial and Poisson Binomial distributions together with their linear combinations. 
+
+For integer weights, we present two algorithms to calculate a probability mass function (PMF) and a cumulative distribution function (CDF) of a weighted sum of BRVs: utilising the Discrete Fourier transform and convolution method. For non-integer weights we suggest the heuristic approach to compute a pointwise CDF using rounding and integer linear programming. We also propose the transformation algorithm to estimate the joint distribution of weighted sums of BRVs and suggest the heuristics to estimate PMF and CDF, when BRVs are non-independent. Together with numerical studies we discuss possible application in bioinformatics analysis.
   
-The BernMix package provides a Python implementation of the algorithms to calculate PMFs and CDFs for both cases (integer and non-integer weights); C++ library for using Fast Fourier transform is wrapped with Cython. We analyse the time complexity of the algorithms and demonstrate their performance and accuracy.  
+The BernMix package provides Python implementations of all developed algorithms; C++ library for using Fast Fourier transform is wrapped with Cython. Code is available on GitHub and via PyPi. 
 
 ## Implemented methods
 
-* `bernmix_pmf_int` - computation of the PMF for a integer-weighted sum of BRVs by the developed method
-* `bernmix_cdf_int` - computation of the CDF for a integer-weighted sum of BRVs by the developed method
-* `bernmix_cdf_double` - computation of the CDF for a weighted sum of BRVs with real weights by the developed method
-* `conv_pmf_int` - computation of the PMF for a integer-weighted sum of BRVs by the convolution
+* `pmf_int` - computation of the PMF for a **integer-weighted** sum of BRVs by the FFT-based} method
+* `cdf_int` - computation of the CDF for a integer-weighted sum of BRVs by the FFT-based method
+* `cdf_double` - computation of the pointwise corrected CDF for a weighted sum of BRVs with **real weights** by the FFT-based method
 * `permut_cdf` - computation of the CDF for a weighted sum of BRVs by the permutation
+* `pmf_int_conv` - computation of the PMF for a **integer-weighted** sum of BRVs by the **convolution** method
+* `pmf_int_bf` - computation of the PMF for a integer-weighted sum of BRVs by the brute-force search
+* `pmf_int_dep` - computation of the PMF for a integer-weighted sum of **dependent BRVs** by the convolution method
+* `pmf_int_joint` - computation of the **joint** PMF for integer-weighted sums of BRVs
+* `pmf_int_prod` - computation of the PMF for the **product** of two integer-weighted sums of BRVs
+
+
+There are two required parameters in each function: a list of success probabilities for BRVs and a vector of weights. Other parameters have default values but can be set by the user.
+
 
 
 ## Requirements
@@ -32,8 +42,12 @@ The BernMix also required the [FFTW3](http://www.fftw.org/download.html) library
 
 ## Installation
 
+BernMix can be installed via PyPi:
+```
+pip install bernmix
+```
 
-To install the BernMix package, run the following commands:
+or by the following commands:
 ```
 git clone https://github.com/iganna/bernmix.git
 cd bernmix
@@ -49,11 +63,12 @@ All tests that were used in the below article, are presented in a Python noteboo
 
 ## References
 
-The mathematical inference of the algorithm implemented in the BernMix package is described in A.A.Igolkina et al., *BernMix: the distribution of a weighted sum of independent Bernoulli random variables with different success probabilities*
+The mathematical inference of the algorithm implemented in the BernMix package is described in A.A.Igolkina, *On distributions of weighted sums of binary random variables*
 
 ## Authors
 
 **Anna Igolkina** developed the BernMix package, [e-mail](mailto:igolkinaanna11@gmail.com).    
+
 **Max Kovalev**  contributed in `bernmix_int/bernmix_fourier.c`.
 
 
