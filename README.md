@@ -21,15 +21,14 @@ The BernMix package provides Python implementations of all developed algorithms;
 ## Implemented methods
 
 * `pmf_int` - computation of the PMF for a **integer-weighted** sum of BRVs by the FFT-based} method
-* `cdf_int` - computation of the CDF for a integer-weighted sum of BRVs by the FFT-based method
-* `cdf_double` - computation of the pointwise corrected CDF for a weighted sum of BRVs with **real weights** by the FFT-based method
-* `permut_cdf` - computation of the CDF for a weighted sum of BRVs by the permutation
 * `pmf_int_conv` - computation of the PMF for a **integer-weighted** sum of BRVs by the **convolution** method
 * `pmf_int_bf` - computation of the PMF for a integer-weighted sum of BRVs by the brute-force search
 * `pmf_int_dep` - computation of the PMF for a integer-weighted sum of **dependent BRVs** by the convolution method
 * `pmf_int_joint` - computation of the **joint** PMF for integer-weighted sums of BRVs
 * `pmf_int_prod` - computation of the PMF for the **product** of two integer-weighted sums of BRVs
-
+* `cdf_int` - computation of the CDF for a integer-weighted sum of BRVs by the FFT-based method
+* `cdf_double` - computation of the pointwise corrected CDF for a weighted sum of BRVs with **real weights** by the FFT-based method
+* `cdf_permut` - computation of the CDF for a weighted sum of BRVs by the permutation
 
 There are two required parameters in each function: a list of success probabilities for BRVs and a vector of weights. Other parameters have default values but can be set by the user.
 
